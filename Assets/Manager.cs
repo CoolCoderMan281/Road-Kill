@@ -9,6 +9,18 @@ public class Manager : MonoBehaviour
     public float MovementIncrement;
     public KeyCode Left;
     public KeyCode Right;
+    [Header("Camera Handling")]
+    public CameraHandler CameraHandler;
+    public GameObject CameraTarget;
+
+    public void Start()
+    {
+        GameObject MainCamera = GameObject.Find("Main Camera");
+        CameraHandler = MainCamera.GetComponent<CameraHandler>();
+        CameraHandler.camera_target_object = CameraTarget;
+        CameraHandler.camera_tween_inbetween = 5f;
+        CameraHandler.follow_type = CameraHandler.TweenType.DELTA_TIME;
+    }
 
     public void Update()
     {
@@ -31,5 +43,11 @@ public class Manager : MonoBehaviour
             newPosition.x += MovementIncrement;
             Player_Obj.transform.position = newPosition;
         }
+    }
+
+    // Handle Camera
+    public void HandleCamera()
+    {
+        // Make camera face the object
     }
 }
