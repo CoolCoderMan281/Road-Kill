@@ -58,7 +58,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.6f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Animal.cs" />
     <Compile Include="Assets\UiHandler.cs" />
+    <Compile Include="Assets\CarCollision.cs" />
     <Compile Include="Assets\LevelManager.cs" />
     <Compile Include="Assets\MenuHandler.cs" />
     <Compile Include="Assets\CameraHandler.cs" />
