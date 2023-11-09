@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fc113fad680dbd64fba1e77a6aa11937
   - enabled: 1
-    path: Assets/Scenes/testscene.unity
-    guid: 76e14820d461b9a4fbbb3b5c9789f0bc
+    path: Assets/Scenes/RoadRage_Main.unity
+    guid: 6c26fe583e33844cab4bec3cffd5805e
   m_configObjects: {}
