@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class Manager : MonoBehaviour
     [Header("Spawning")]
     public float SpawnIncrement;
     public float SpawnedObjectSpeed;
+    public List<Animal_Preset> Animals = new List<Animal_Preset>();
 
     public void Start()
     {
@@ -37,10 +39,13 @@ public class Manager : MonoBehaviour
     {
         while (true)
         {
-            GameObject tmp = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            tmp.transform.position = new Vector3(Random.Range(-Bounds, Bounds),0.5f,255);
+            
+            Animal_Preset rand_animal = Animals[UnityEngine.Random.Range(0, Animals.Count)];
+            GameObject tmp = Instantiate(rand_animal.Animal_Obj);
+            tmp.transform.position = new Vector3(UnityEngine.Random.Range(-Bounds, Bounds),0.5f,255);
             tmp.AddComponent<Animal>();
             tmp.GetComponent<Animal>().Increment = SpawnedObjectSpeed;
+            tmp.GetComponent<Animal>().preset = rand_animal;
             yield return new WaitForSeconds(SpawnIncrement);
         }
     }
@@ -86,5 +91,35 @@ public class Manager : MonoBehaviour
     {
         Debug.Log("Miss");
         Destroy(obj.gameObject);
+    }
+}
+
+[Serializable]
+public class Animal_Preset
+{
+    public enum Direction
+    {
+        None, Left, Right
+    }
+    public enum AnimalType
+    {
+        Single, Herd
+    }
+
+    [Header("Generic")]
+    public GameObject Animal_Obj;
+    public AnimalType Animal_Type;
+    [Header("Movement")]
+    public bool Moves;
+    public float MovementIncrement;
+    public Direction Movement_Direction;
+
+    public Animal_Preset(GameObject animal_Obj, AnimalType animal_Type, bool moves, float movementIncrement, Direction direction, float increment)
+    {
+        Animal_Obj = animal_Obj;
+        Animal_Type = animal_Type;
+        Moves = moves;
+        MovementIncrement = movementIncrement;
+        Movement_Direction = direction;
     }
 }
