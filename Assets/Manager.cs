@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
 
     public void Start()
     {
+        Application.targetFrameRate = 60;
         GameObject MainCamera = GameObject.Find("Main Camera");
         CameraHandler = MainCamera.GetComponent<CameraHandler>();
         CameraHandler.camera_target_object = CameraTarget;
