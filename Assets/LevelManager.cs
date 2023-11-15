@@ -29,17 +29,28 @@ public class LevelManager : MonoBehaviour
     {
         if (ActiveLevel != null && ActiveLevel != NextLevel)
         {
-            if (ActiveLevel.end != null) { ActiveLevel.end(); }
+            //if (ActiveLevel.end != null) { ActiveLevel.end(); }
             Debug.Log("Ended level " + ActiveLevel.name);
             ActiveLevel = NextLevel;
-            if (ActiveLevel.start != null) { ActiveLevel.start(); }
-            SceneManager.LoadScene(ActiveLevel.sceneName);
+            //if (ActiveLevel.start != null) { ActiveLevel.start(); }
+            try
+            {
+                SceneManager.LoadScene(ActiveLevel.sceneName);
+            } catch (Exception e)
+            {
+                Debug.Log("Failed!");
+            }
             Debug.Log("Started level " + ActiveLevel.name);
         }
         else
         {
             Debug.Log("ActiveLevel was unset, or that level is already selected.");
         }
+    }
+
+    public void MainMenu()
+    {
+        SetLevel(MainMenu_Level);
     }
 
     public Level GetLevelByName(string name)

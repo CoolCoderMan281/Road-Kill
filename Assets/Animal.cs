@@ -25,7 +25,7 @@ public class Animal : MonoBehaviour
         transform.position = newPos;
         if (newPos.z < -10)
         {
-            manager.HandleMiss(gameObject);
+            manager.HandleMiss(gameObject,preset);
         }
         target.y = newPos.y;
         target.z = newPos.z;

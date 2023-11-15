@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -18,16 +19,18 @@ public class Manager : MonoBehaviour
     public float SpawnIncrement;
     public float SpawnedObjectSpeed;
     public List<Animal_Preset> Animals = new List<Animal_Preset>();
+    [Header("External")]
+    public LevelManager levelManager;
 
     public void Start()
     {
-        Application.targetFrameRate = 60;
         GameObject MainCamera = GameObject.Find("Main Camera");
         CameraHandler = MainCamera.GetComponent<CameraHandler>();
         CameraHandler.camera_target_object = CameraTarget;
         CameraHandler.camera_tween_inbetween = 5f;
         CameraHandler.follow_type = CameraHandler.TweenType.DELTA_TIME;
         StartCoroutine(SpawnAnimals());
+        levelManager = MainCamera.GetComponent<LevelManager>();
     }
 
     public void Update()
@@ -81,14 +84,22 @@ public class Manager : MonoBehaviour
     }
 
     // Hit detection
-    public void HandleHit(GameObject obj)
+    public void HandleHit(GameObject obj, Animal_Preset preset)
     {
-        Debug.Log("Hit");
-        Destroy(obj.gameObject);
+        if (preset.Animal_Type == Animal_Preset.AnimalType.Single)
+        {
+            Debug.Log("Hit");
+            Destroy(obj.gameObject);
+        } else
+        {
+            Debug.Log("YOU SHOULDNT HIT THOSE!!!!");
+            Destroy(obj.gameObject);
+            //levelManager.MainMenu();
+        }
     }
 
     // Miss in-point
-    public void HandleMiss(GameObject obj)
+    public void HandleMiss(GameObject obj, Animal_Preset preset)
     {
         Debug.Log("Miss");
         Destroy(obj.gameObject);
