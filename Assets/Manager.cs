@@ -24,6 +24,8 @@ public class Manager : MonoBehaviour
 
     public void Start()
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 144;
         GameObject MainCamera = GameObject.Find("Main Camera");
         CameraHandler = MainCamera.GetComponent<CameraHandler>();
         CameraHandler.camera_target_object = CameraTarget;

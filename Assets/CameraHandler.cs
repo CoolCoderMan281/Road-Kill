@@ -27,6 +27,7 @@ public class CameraHandler : MonoBehaviour
     {
         // Fool proofing
         Application.targetFrameRate = 144;
+        QualitySettings.vSyncCount = 0;
         DontDestroyOnLoad(this);
         if (camera.GetComponent<Camera>() == null || camera == null)
         {
