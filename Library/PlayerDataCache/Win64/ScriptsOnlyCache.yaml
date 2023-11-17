@@ -133,6 +133,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UiHandler
     methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
   sceneClasses:
     Assets/Scenes/InitScene.unity:
     - Class: 1
@@ -166,35 +172,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 1896}
     - Class: 114
-      Script: {instanceID: 2698}
+      Script: {instanceID: 2230}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 3220}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 4334}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 4608}
+      Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5368}
+      Script: {instanceID: 4260}
     - Class: 114
-      Script: {instanceID: 5962}
+      Script: {instanceID: 4342}
     - Class: 114
-      Script: {instanceID: 6130}
+      Script: {instanceID: 4618}
     - Class: 114
-      Script: {instanceID: 6480}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 8548}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 8552}
+      Script: {instanceID: 6142}
     - Class: 114
-      Script: {instanceID: 8568}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 8572}
+      Script: {instanceID: 7608}
     - Class: 114
-      Script: {instanceID: 8576}
+      Script: {instanceID: 8302}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -237,29 +243,80 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2698}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3220}
+      Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5230}
+      Script: {instanceID: 5240}
     - Class: 114
-      Script: {instanceID: 5286}
+      Script: {instanceID: 5296}
     - Class: 114
-      Script: {instanceID: 5368}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5642}
+      Script: {instanceID: 5652}
     - Class: 114
-      Script: {instanceID: 5962}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 6130}
+      Script: {instanceID: 6142}
     - Class: 114
-      Script: {instanceID: 6480}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 8544}
+      Script: {instanceID: 7300}
     - Class: 114
-      Script: {instanceID: 8576}
+      Script: {instanceID: 7608}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/RoadRage_Lose.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1592}
+    - Class: 114
+      Script: {instanceID: 2702}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3224}
+    - Class: 114
+      Script: {instanceID: 5378}
+    - Class: 114
+      Script: {instanceID: 5974}
+    - Class: 114
+      Script: {instanceID: 6142}
+    - Class: 114
+      Script: {instanceID: 6492}
+    - Class: 114
+      Script: {instanceID: 7300}
+    - Class: 114
+      Script: {instanceID: 7608}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -300,9 +357,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 8560}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 8564}
+      Script: {instanceID: 5764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -384,6 +441,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 290353d4dc4de77ae1cc8f82cbe987f4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraHandler
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -424,6 +487,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreakMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1ff7613ba62932138f75bab24a7a601d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DialogueHandler
   - hash:
       serializedVersion: 2
       Hash: 6f67dd406ddfc18c9b3f8a90725c6266
@@ -582,6 +651,12 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 603102d29d86e03040a8efe8605e6c19
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Manager
+  - hash:
+      serializedVersion: 2
       Hash: 0249933f35dcc970b31eaae0159aebf9
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -726,6 +801,12 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: 8e3f7fdeb2024956f84d382bca4cc8d5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -778,6 +859,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.OnScreen
     className: OnScreenStick
+  - hash:
+      serializedVersion: 2
+      Hash: 742e15415b55a1a9497fbb1c0841cde9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Animal
   - hash:
       serializedVersion: 2
       Hash: fcc569162a8d9bd9df34e8c9dee84212
@@ -952,6 +1039,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CarCollision
   - hash:
       serializedVersion: 2
       Hash: 654cebef8aa88cb6cd0504505364d614
@@ -1176,6 +1269,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 0c6b218187b837dd0151aa145ead4cbd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuHandler
+  - hash:
+      serializedVersion: 2
       Hash: 53c46bce503f838890a138bb8aac7598
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
@@ -1204,6 +1303,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: ed4b69d55230820f44fb9e967e689eed
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UiHandler
   - hash:
       serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
@@ -1272,6 +1377,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 24834de0b889738e8e3052c0c4bf36ba
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioHandler
+  - hash:
+      serializedVersion: 2
       Hash: afe1800287c9574079eab3fea2622416
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1312,63 +1423,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 0c6b218187b837dd0151aa145ead4cbd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MenuHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 8dde7e5cf1d3936b46c012bcb971629f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraHandler
-  - hash:
-      serializedVersion: 2
-      Hash: fa4071841659caf357603420786e7504
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LevelManager
-  - hash:
-      serializedVersion: 2
-      Hash: 742e15415b55a1a9497fbb1c0841cde9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Animal
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CarCollision
-  - hash:
-      serializedVersion: 2
-      Hash: 603102d29d86e03040a8efe8605e6c19
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Manager
-  - hash:
-      serializedVersion: 2
-      Hash: 24834de0b889738e8e3052c0c4bf36ba
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AudioHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 1ff7613ba62932138f75bab24a7a601d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DialogueHandler
-  - hash:
-      serializedVersion: 2
-      Hash: ed4b69d55230820f44fb9e967e689eed
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UiHandler
   platform: 19
   scenePathNames:
   - Assets/Scenes/InitScene.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
-  playerPath: C:/Users/ethan.355186/Desktop/0.0.4/Stumpy-Road.exe
+  - Assets/Scenes/RoadRage_Lose.unity
+  playerPath: C:/Users/ethan.355186/Desktop/0.0.5/Stumpy-Road.exe

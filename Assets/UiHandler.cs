@@ -14,7 +14,7 @@ public class UiHandler : MonoBehaviour
     public ActionType action;
     public string action_parameter;
 
-    public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume }
+    public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY}
 
     public void Start()
     {
@@ -33,6 +33,10 @@ public class UiHandler : MonoBehaviour
 
     public void Click()
     {
+        if (menuHandler == null)
+        {
+            menuHandler = GameObject.Find("MenuHandler").GetComponent<MenuHandler>();
+        }
         switch(action)
         {
             case ActionType.SwitchMenu:
@@ -67,6 +71,17 @@ public class UiHandler : MonoBehaviour
                 audioHandler.SFX_Volume = GetComponentInParent<UnityEngine.UI.Slider>().value;
                 audioHandler.UpdateAudios();
                 break;
+            case ActionType.MainMenu:
+                levelManager.SetLevel(levelManager.MainMenu_Level);
+                break;
+            case ActionType.FPS_DISPLAY:
+                cameraHandler.fps_overlay_active = !cameraHandler.fps_overlay_active;
+                if (!cameraHandler.fps_overlay_active)
+                {
+                    cameraHandler.fps_overlay.text = "";
+                }
+                break;
+
         }
     }
 }

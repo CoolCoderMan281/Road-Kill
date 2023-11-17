@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoadRage_Main.unity
     guid: 6c26fe583e33844cab4bec3cffd5805e
+  - enabled: 1
+    path: Assets/Scenes/RoadRage_Lose.unity
+    guid: 369ec19cfcb94da4ea71bec4c4dfe55d
   m_configObjects: {}

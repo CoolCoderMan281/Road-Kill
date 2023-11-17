@@ -11,10 +11,18 @@ public class MenuHandler : MonoBehaviour
 
     public void Start()
     {
+        GameObject tmp = GameObject.Find("Main Camera");
+        CameraHandler CH = tmp.GetComponent<CameraHandler>();
+        if (CH.MenuHandler != null)
+        {
+            Destroy(CH.MenuHandler);
+        }
+        CH.MenuHandler = gameObject;
         DontDestroyOnLoad(this);
         if (mainMenu == null) { Debug.LogError("No main menu has been defined!"); }
         menuList.Add(mainMenu);
         SetCurrentMenu(mainMenu);
+        Debug.Log("Set to main menu");
     }
 
     public void SetCurrentMenu(Menu menu)
@@ -26,7 +34,14 @@ public class MenuHandler : MonoBehaviour
         }
         foreach (Menu menu_i in menuList)
         {
-            menu_i.menuObject.SetActive(false);
+            try
+            {
+                menu_i.menuObject.SetActive(false);
+            }
+            catch
+            {
+                Debug.LogWarning("Couldn't hide object: " + menu_i.menuObject.name);
+            }
         }
         menu.menuObject.SetActive(true);
     }

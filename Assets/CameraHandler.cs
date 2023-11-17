@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,11 @@ public class CameraHandler : MonoBehaviour
     public GameObject camera_target_object;
     public TweenType follow_type;
     public float camera_tween_inbetween;
+    [Header("External")]
+    public GameObject MenuHandler;
+    public TMP_Text fps_overlay;
+    public bool fps_overlay_active = false;
+    public float timer, refresh, avgFramerate;
 
     public enum TweenType
     {
@@ -20,6 +26,7 @@ public class CameraHandler : MonoBehaviour
     public void Start()
     {
         // Fool proofing
+        Application.targetFrameRate = 144;
         DontDestroyOnLoad(this);
         if (camera.GetComponent<Camera>() == null || camera == null)
         {
@@ -34,6 +41,14 @@ public class CameraHandler : MonoBehaviour
 
     public void Update()
     {
+        if (fps_overlay_active)
+        {
+            float timelapse = Time.smoothDeltaTime;
+            timer = timer <= 0 ? refresh : timer -= timelapse;
+
+            if (timer <= 0) avgFramerate = (int)(1f / timelapse);
+            fps_overlay.text = avgFramerate.ToString() + " FPS";
+        }
         switch(follow_type)
         {
             case TweenType.LERP:

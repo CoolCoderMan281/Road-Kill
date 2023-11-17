@@ -88,13 +88,11 @@ public class Manager : MonoBehaviour
     {
         if (preset.Animal_Type == Animal_Preset.AnimalType.Single)
         {
-            Debug.Log("Hit");
             Destroy(obj.gameObject);
         } else
         {
-            Debug.Log("YOU SHOULDNT HIT THOSE!!!!");
             Destroy(obj.gameObject);
-            //levelManager.MainMenu();
+            levelManager.SetLevel(levelManager.GetLevelByName("RoadRage_Lose"));
         }
     }
 

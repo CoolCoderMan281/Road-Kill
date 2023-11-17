@@ -27,6 +27,10 @@ public class LevelManager : MonoBehaviour
     // Set the ActiveLevel
     public void SetLevel(Level NextLevel)
     {
+        if (NextLevel == null)
+        {
+            Debug.LogError("A null level has been passed, please pass a real level");
+        }
         if (ActiveLevel != null && ActiveLevel != NextLevel)
         {
             //if (ActiveLevel.end != null) { ActiveLevel.end(); }
@@ -36,11 +40,15 @@ public class LevelManager : MonoBehaviour
             try
             {
                 SceneManager.LoadScene(ActiveLevel.sceneName);
-            } catch (Exception e)
+            } catch
             {
                 Debug.Log("Failed!");
             }
             Debug.Log("Started level " + ActiveLevel.name);
+            if (ActiveLevel.autoAction == Level.AutoAction.CameraReset)
+            {
+                GameObject.Find("Main Camera").transform.position = new Vector3(0, 0, 0);
+            }
         }
         else
         {
@@ -84,19 +92,23 @@ public class LevelManager : MonoBehaviour
 [System.Serializable]
 public class Level
 {
+    public enum AutoAction { CameraReset }
+
     public string name;
     public int id;
     public string sceneName;
     public string affiliation;
+    public AutoAction autoAction;
     public Func<string> start;
     public Func<string> update;
     public Func<string> end;
-    public Level(string name, int id, string sceneName, string affiliation=null, Func<string> start=null, Func<string> update=null, Func<string> end=null)
+    public Level(string name, int id, string sceneName, AutoAction autoAction, string affiliation = null, Func<string> start=null, Func<string> update=null, Func<string> end=null)
     {
         this.name = name;
         this.id = id;
         this.sceneName = sceneName;
         this.affiliation = affiliation;
+        this.autoAction = autoAction;
         this.start = start;
         this.update = update;
         this.end = end;

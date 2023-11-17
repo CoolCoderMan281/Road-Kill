@@ -1038,30 +1038,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player_Obj: {fileID: 181876004}
-  MovementIncrement: 0.25
+  MovementIncrement: 1.5
   Bounds: 7.25
   Left: 97
   Right: 100
   CameraHandler: {fileID: 0}
   CameraTarget: {fileID: 649505872}
   SpawnIncrement: 0.75
-  SpawnedObjectSpeed: 0.05
+  SpawnedObjectSpeed: 0.2
   Animals:
   - Animal_Obj: {fileID: 1972272681}
     Animal_Type: 0
     Moves: 1
-    MovementIncrement: 1
+    MovementIncrement: 3
     Movement_Direction: 2
   - Animal_Obj: {fileID: 2069149859}
     Animal_Type: 0
     Moves: 1
-    MovementIncrement: 1
+    MovementIncrement: 3
     Movement_Direction: 1
   - Animal_Obj: {fileID: 1367482536}
     Animal_Type: 1
     Moves: 0
-    MovementIncrement: 1
+    MovementIncrement: 3
     Movement_Direction: 1
+  levelManager: {fileID: 0}
 --- !u!4 &1309137542
 Transform:
   m_ObjectHideFlags: 0
