@@ -14,7 +14,7 @@ public class UiHandler : MonoBehaviour
     public ActionType action;
     public string action_parameter;
 
-    public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY}
+    public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed}
 
     public void Start()
     {
@@ -81,7 +81,10 @@ public class UiHandler : MonoBehaviour
                     cameraHandler.fps_overlay.text = "";
                 }
                 break;
-
+            case ActionType.UpdateSpeed:
+                Manager mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.UpdateMovementIncrement();
+                break;
         }
     }
 }

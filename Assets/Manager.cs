@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Manager : MonoBehaviour
     public List<Animal_Preset> Animals = new List<Animal_Preset>();
     [Header("External")]
     public LevelManager levelManager;
+    public MenuHandler menuHandler;
+    public Slider Car_Speed_Slider;
 
     public void Start()
     {
@@ -33,11 +36,18 @@ public class Manager : MonoBehaviour
         CameraHandler.follow_type = CameraHandler.TweenType.DELTA_TIME;
         StartCoroutine(SpawnAnimals());
         levelManager = MainCamera.GetComponent<LevelManager>();
+        Car_Speed_Slider.value = MovementIncrement;
     }
 
     public void Update()
     {
         HandleInput();
+    }
+
+    // Handle movement speed update
+    public void UpdateMovementIncrement()
+    {
+        MovementIncrement = Car_Speed_Slider.value;
     }
 
     // Handle animal spawning
@@ -59,6 +69,24 @@ public class Manager : MonoBehaviour
     // Handle Input
     public void HandleInput()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log(menuHandler.currentMenu.name);
+            if (menuHandler.currentMenu == menuHandler.GetMenuByName("pause"))
+            {
+                UiHandler uih = gameObject.AddComponent<UiHandler>();
+                uih.action = UiHandler.ActionType.SwitchMenu;
+                uih.action_parameter = "MainMenu";
+                uih.Click();
+            }
+            else
+            {
+                UiHandler uih = gameObject.AddComponent<UiHandler>();
+                uih.action = UiHandler.ActionType.SwitchMenu;
+                uih.action_parameter = "pause";
+                uih.Click();
+            }
+        }
         if (Input.GetKey(Left))
         {
             // Left
