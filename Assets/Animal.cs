@@ -19,6 +19,7 @@ public class Animal : MonoBehaviour
 
     public void Update()
     {
+        Increment = manager.SpawnedObjectSpeed;
         Vector3 newPos = transform.position;
         newPos.z -= Increment;
         newPos.y = 0.5f;

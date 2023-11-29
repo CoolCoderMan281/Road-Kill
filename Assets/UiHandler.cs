@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,8 @@ public class UiHandler : MonoBehaviour
     public ActionType action;
     public string action_parameter;
 
-    public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed}
+    public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
+                             UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, }
 
     public void Start()
     {
@@ -28,6 +30,31 @@ public class UiHandler : MonoBehaviour
         catch
         {
             Debug.LogWarning("I'm having issues defining scripts! from "+gameObject.name);
+        }
+
+        switch(action)
+        {
+            case ActionType.UpdateCamY:
+                GameObject cam_poser = GameObject.Find("Camera_Positioner");
+                GameObject.Find("CamY_Label").GetComponent<TMP_Text>().text = "CamY (" + cam_poser.transform.position.y + ")";
+                gameObject.GetComponent<Slider>().value = cam_poser.transform.position.y;
+                break;
+            case ActionType.UpdateCamZ:
+                cam_poser = GameObject.Find("Camera_Positioner");
+                GameObject.Find("CamZ_Label").GetComponent<TMP_Text>().text = "CamZ (" + cam_poser.transform.position.z + ")";
+                gameObject.GetComponent<Slider>().value = cam_poser.transform.position.z;
+                break;
+            case ActionType.UpdateCollisionVisibility:
+                MeshRenderer mr = GameObject.Find("Player_Obj").GetComponent<MeshRenderer>();
+                gameObject.GetComponent<Toggle>().isOn = mr.enabled;
+                break;
+            case ActionType.UpdateAnimalSpeed:
+                Slider self = gameObject.GetComponent<Slider>();
+                Manager mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.SpawnedObjectSpeed;
+                TMP_Text label = GameObject.Find("Animal_Speed_Label").GetComponent<TMP_Text>();
+                label.text = "Animal Speed (" + mgr.SpawnedObjectSpeed + ")";
+                break;
         }
     }
 
@@ -84,6 +111,31 @@ public class UiHandler : MonoBehaviour
             case ActionType.UpdateSpeed:
                 Manager mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.UpdateMovementIncrement();
+                break;
+            case ActionType.UpdateCamY:
+                GameObject cam_poser = GameObject.Find("Camera_Positioner");
+                Vector3 newPos = cam_poser.transform.position; newPos.y = gameObject.GetComponent<Slider>().value;
+                cam_poser.transform.position = newPos;
+                GameObject.Find("CamY_Label").GetComponent<TMP_Text>().text = "CamY (" + cam_poser.transform.position.y + ")";
+                break;
+            case ActionType.UpdateCamZ:
+                cam_poser = GameObject.Find("Camera_Positioner");
+                newPos = cam_poser.transform.position; newPos.z = gameObject.GetComponent<Slider>().value;
+                cam_poser.transform.position = newPos;
+                GameObject.Find("CamZ_Label").GetComponent<TMP_Text>().text = "CamZ (" + cam_poser.transform.position.z + ")";
+                break;
+            case ActionType.UpdateCollisionVisibility:
+                GameObject player_obj = GameObject.Find("Player_Obj");
+                MeshRenderer mr = player_obj.GetComponent<MeshRenderer>();
+                mr.enabled = !mr.enabled;
+                gameObject.GetComponent<Toggle>().isOn = mr.enabled;
+                break;
+            case ActionType.UpdateAnimalSpeed:
+                Slider self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.SpawnedObjectSpeed = self.value;
+                TMP_Text label = GameObject.Find("Animal_Speed_Label").GetComponent<TMP_Text>();
+                label.text = "Animal Speed (" + mgr.SpawnedObjectSpeed + ")";
                 break;
         }
     }

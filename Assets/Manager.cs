@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,6 +25,7 @@ public class Manager : MonoBehaviour
     public LevelManager levelManager;
     public MenuHandler menuHandler;
     public Slider Car_Speed_Slider;
+    public TMP_Text Car_Speed_Label;
 
     public void Start()
     {
@@ -37,6 +39,7 @@ public class Manager : MonoBehaviour
         StartCoroutine(SpawnAnimals());
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
+        Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
     }
 
     public void Update()
@@ -48,6 +51,7 @@ public class Manager : MonoBehaviour
     public void UpdateMovementIncrement()
     {
         MovementIncrement = Car_Speed_Slider.value;
+        Car_Speed_Label.text = "Car Speed (" + Car_Speed_Slider.value.ToString() + ")";
     }
 
     // Handle animal spawning
@@ -60,7 +64,6 @@ public class Manager : MonoBehaviour
             GameObject tmp = Instantiate(rand_animal.Animal_Obj);
             tmp.transform.position = new Vector3(UnityEngine.Random.Range(-Bounds, Bounds),0.5f,255);
             tmp.AddComponent<Animal>();
-            tmp.GetComponent<Animal>().Increment = SpawnedObjectSpeed;
             tmp.GetComponent<Animal>().preset = rand_animal;
             yield return new WaitForSeconds(SpawnIncrement);
         }
@@ -71,16 +74,13 @@ public class Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log(menuHandler.currentMenu.name);
             if (menuHandler.currentMenu == menuHandler.GetMenuByName("pause"))
             {
                 UiHandler uih = gameObject.AddComponent<UiHandler>();
                 uih.action = UiHandler.ActionType.SwitchMenu;
                 uih.action_parameter = "MainMenu";
                 uih.Click();
-            }
-            else
-            {
+            } else {
                 UiHandler uih = gameObject.AddComponent<UiHandler>();
                 uih.action = UiHandler.ActionType.SwitchMenu;
                 uih.action_parameter = "pause";
@@ -129,7 +129,6 @@ public class Manager : MonoBehaviour
     // Miss in-point
     public void HandleMiss(GameObject obj, Animal_Preset preset)
     {
-        Debug.Log("Miss");
         Destroy(obj.gameObject);
     }
 }

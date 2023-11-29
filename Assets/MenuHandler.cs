@@ -44,6 +44,7 @@ public class MenuHandler : MonoBehaviour
             }
         }
         menu.menuObject.SetActive(true);
+        currentMenu = menu;
     }
 
     public Menu GetMenuByName(string name)
