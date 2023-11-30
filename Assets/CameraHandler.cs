@@ -23,6 +23,11 @@ public class CameraHandler : MonoBehaviour
         LERP, DELTA_TIME
     }
 
+    public void OnApplicationQuit()
+    {
+        Destroy(gameObject);
+    }
+
     public void Start()
     {
         // Fool proofing

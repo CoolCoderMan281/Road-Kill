@@ -17,6 +17,11 @@ public class Animal : MonoBehaviour
         StartCoroutine(Walking());
     }
 
+    public void OnApplicationQuit()
+    {
+        Destroy(gameObject);
+    }
+
     public void Update()
     {
         Increment = manager.SpawnedObjectSpeed;

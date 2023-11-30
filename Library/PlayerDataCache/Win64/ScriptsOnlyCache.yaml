@@ -21,6 +21,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -37,6 +38,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
@@ -52,6 +56,9 @@ ScriptsOnlyBuild:
     - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
     - TMPro.TMP_Character
+    - TMPro.TMP_Dropdown/DropdownEvent
+    - TMPro.TMP_Dropdown/OptionData
+    - TMPro.TMP_Dropdown/OptionDataList
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
     - TMPro.TMP_GlyphAdjustmentRecord
@@ -78,10 +85,24 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
   - assembly: Assembly-CSharp
     fullTypeName: UiHandler
     methodName: Click
@@ -235,23 +256,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 4258}
+      Script: {instanceID: 4260}
     - Class: 114
-      Script: {instanceID: 4340}
+      Script: {instanceID: 4342}
     - Class: 114
-      Script: {instanceID: 4616}
+      Script: {instanceID: 4618}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 6142}
     - Class: 114
-      Script: {instanceID: 6490}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 7606}
+      Script: {instanceID: 7608}
     - Class: 114
-      Script: {instanceID: 8300}
+      Script: {instanceID: 8302}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -300,23 +321,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5238}
+      Script: {instanceID: 5240}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 5296}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5650}
+      Script: {instanceID: 5652}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 6142}
     - Class: 114
-      Script: {instanceID: 6490}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 7298}
+      Script: {instanceID: 7300}
     - Class: 114
-      Script: {instanceID: 7606}
+      Script: {instanceID: 7608}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -357,17 +378,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 6142}
     - Class: 114
-      Script: {instanceID: 6490}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 7298}
+      Script: {instanceID: 7300}
     - Class: 114
-      Script: {instanceID: 7606}
+      Script: {instanceID: 7608}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -412,31 +433,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
+      Script: {instanceID: 2708}
+    - Class: 114
       Script: {instanceID: 2914}
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5238}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 4064}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5240}
     - Class: 114
-      Script: {instanceID: 5650}
+      Script: {instanceID: 5296}
     - Class: 114
-      Script: {instanceID: 5762}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5652}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 5764}
     - Class: 114
-      Script: {instanceID: 6490}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 7298}
+      Script: {instanceID: 6142}
     - Class: 114
-      Script: {instanceID: 7606}
+      Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 8502}
+      Script: {instanceID: 6502}
+    - Class: 114
+      Script: {instanceID: 7300}
+    - Class: 114
+      Script: {instanceID: 7608}
+    - Class: 114
+      Script: {instanceID: 7664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -736,6 +765,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformParentChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b4489b06515e12d5db2386ae00a0cbee
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Manager
   - hash:
       serializedVersion: 2
       Hash: 0249933f35dcc970b31eaae0159aebf9
@@ -1504,16 +1539,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: b22d14a3f31ab525a1b12efafa18bc75
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Manager
   platform: 19
   scenePathNames:
   - Assets/Scenes/InitScene.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
   - Assets/Scenes/RoadRage_Lose.unity
-  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.2/Stumpy-Road.exe
+  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.3/Stumpy-Road.exe

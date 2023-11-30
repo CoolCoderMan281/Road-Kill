@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +20,13 @@ public class UiHandler : MonoBehaviour
 
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
-                             UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, }
+                             UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects, 
+                             ObjectSelector, ObjectType, }
+
+    public void OnApplicationQuit()
+    {
+        Destroy(gameObject);
+    }
 
     public void Start()
     {
@@ -109,6 +117,46 @@ public class UiHandler : MonoBehaviour
                 toggle_self = gameObject.GetComponent<Toggle>();
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 toggle_self.isOn = mgr.CanSpawnObstacles;
+                break;
+            case ActionType.UpdateSpawnIncrement:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.SpawnIncrement;
+                action_label.text = "Spawn tick (" + mgr.SpawnIncrement + ")";
+                break;
+            case ActionType.ObjectSelector:
+                TMP_Dropdown dropdown_self = gameObject.GetComponent<TMP_Dropdown>();
+                dropdown_self.ClearOptions();
+                // Create dropdown data
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                List<TMP_Dropdown.OptionData> drop = new List<TMP_Dropdown.OptionData>();
+                foreach(Animal_Preset preset in mgr.Animals)
+                {
+                    TMP_Dropdown.OptionData dropdown_option = new TMP_Dropdown.OptionData();
+                    dropdown_option.text = preset.Animal_Obj.name;
+                    drop.Add(dropdown_option);
+                }
+                Debug.Log(drop.Count.ToString());
+                dropdown_self.AddOptions(drop.ToList());
+                break;
+            case ActionType.ObjectType:
+                dropdown_self = gameObject.GetComponent<TMP_Dropdown>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                string target = GameObject.Find("ObjectSelector").GetComponent<TMP_Dropdown>().itemText.text;
+                Debug.Log(target);
+                foreach(Animal_Preset animal_Preset in mgr.Animals)
+                {
+                    if (target == animal_Preset.Animal_Obj.name)
+                    {
+                        if (animal_Preset.Animal_Type == Animal_Preset.AnimalType.Single)
+                        {
+                            dropdown_self.value = 0;
+                        } else
+                        {
+                            dropdown_self.value = 1;
+                        }
+                    }
+                }
                 break;
         }
     }
@@ -244,6 +292,52 @@ public class UiHandler : MonoBehaviour
                 toggle_self = gameObject.GetComponent<Toggle>();
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.CanSpawnObstacles = toggle_self.isOn;
+                break;
+            case ActionType.UpdateSpawnIncrement:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.SpawnIncrement = self.value;
+                action_label.text = "Spawn tick (" + mgr.SpawnIncrement + ")";
+                break;
+            case ActionType.KillObjects:
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                List<GameObject> list = new List<GameObject>();
+                list = mgr.Objects; // Working object list
+                foreach (GameObject obj in list.ToList())
+                {
+                    try
+                    {
+                        mgr.Objects.Remove(obj);
+                        Destroy(obj);
+                    }
+                    catch { }
+                }
+                break;
+            case ActionType.ObjectSelector:
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                TMP_Dropdown dropdown_self = gameObject.GetComponent<TMP_Dropdown>();
+                GameObject tmp_dr = GameObject.Find("ObjectType");
+                tmp_dr.GetComponent<UiHandler>().Click();
+                
+                break;
+            case ActionType.ObjectType:
+                dropdown_self = gameObject.GetComponent<TMP_Dropdown>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                string dropdown_target = GameObject.Find("ObjectSelector").GetComponent<TMP_Dropdown>().itemText.text;
+                foreach (Animal_Preset animal_Preset in mgr.Animals)
+                {
+                    if (dropdown_target == animal_Preset.Animal_Obj.name)
+                    {
+                        if (animal_Preset.Animal_Type == Animal_Preset.AnimalType.Single)
+                        {
+                            dropdown_self.value = 0;
+                        }
+                        else
+                        {
+                            dropdown_self.value = 1;
+                        }
+                    }
+                }
                 break;
         }
     }

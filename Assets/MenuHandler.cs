@@ -9,6 +9,10 @@ public class MenuHandler : MonoBehaviour
     public Menu mainMenu;
     public Menu currentMenu;
 
+    public void OnApplicationQuit()
+    {
+        Destroy(gameObject);
+    }
     public void Start()
     {
         GameObject tmp = GameObject.Find("Main Camera");

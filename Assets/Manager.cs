@@ -37,6 +37,7 @@ public class Manager : MonoBehaviour
     public float SpawnIncrement;
     public float SpawnedObjectSpeed;
     public List<Animal_Preset> Animals = new List<Animal_Preset>();
+    public List<GameObject> Objects = new List<GameObject>();
     [Header("External")]
     public LevelManager levelManager;
     public MenuHandler menuHandler;
@@ -59,6 +60,11 @@ public class Manager : MonoBehaviour
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
+    }
+
+    public void OnApplicationQuit()
+    {
+        Destroy(gameObject);
     }
 
     public void Update()
@@ -85,12 +91,13 @@ public class Manager : MonoBehaviour
             if (CanSpawn)
             {
                 Animal_Preset rand_animal = Animals[UnityEngine.Random.Range(0, Animals.Count)];
-                if ((rand_animal.Animal_Type == Animal_Preset.AnimalType.Single && CanSpawnAnimals) || (rand_animal.Animal_Type == Animal_Preset.AnimalType.Herd && CanSpawnObstacles))
+                if ((rand_animal.Animal_Type == Animal_Preset.AnimalType.Single && CanSpawnAnimals) || (rand_animal.Animal_Type == Animal_Preset.AnimalType.Obstacle && CanSpawnObstacles))
                 {
                     GameObject tmp = Instantiate(rand_animal.Animal_Obj);
                     tmp.transform.position = new Vector3(UnityEngine.Random.Range(-Bounds, Bounds), 0.5f, 255);
                     tmp.AddComponent<Animal>();
                     tmp.GetComponent<Animal>().preset = rand_animal;
+                    Objects.Add(tmp);
                     yield return new WaitForSeconds(SpawnIncrement);
                 } else
                 {
@@ -195,11 +202,13 @@ public class Manager : MonoBehaviour
         if (preset.Animal_Type == Animal_Preset.AnimalType.Single)
         {
             RageProgress += RageIncrement * RageHitReward;
+            Objects.Remove(obj);
             Destroy(obj.gameObject);
         } else
         {
             if (CanDie)
             {
+                Objects.Remove(obj);
                 Destroy(obj.gameObject);
                 levelManager.SetLevel(levelManager.GetLevelByName("RoadRage_Lose"));
             }
@@ -222,7 +231,7 @@ public class Animal_Preset
     }
     public enum AnimalType
     {
-        Single, Herd
+        Single, Obstacle
     }
 
     [Header("Generic")]
