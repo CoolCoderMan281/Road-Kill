@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 379
     height: 659
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 480
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -349,7 +349,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 524dffffa24dffff244fffff744fffffa84fffffc84fffff2e65ffffb465ffff047afffff07affffc281ffffb295fffff09dffff16a0ffff90a2ffff28a5ffff78a5ffff52b3ffff2cb6ffff3ec9ffff9ecafffff8cdffff58cfffffced1ffff30d3ffff94d5ffffa6e3ffff02f6ffff3ef7fffff4ffffffc477000000780000de7b00003e7c00007c890000d28c0000be8d0000268e0000729b0000c89e0000b49f00001ca0000068ad0000aab1000012b200007abf0000a0c3000008c4000012c40000ecd100002ed6000096d6000012e40000aae600007ce80000ece8000088f90000f2fd000062fe000070090100da0d01004a0e0100920e01002a110100fc1201006c130100
+      m_ExpandedIDs: 2afbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -684,9 +684,9 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 813, y: 416}
+      snapOffset: {x: -246, y: -222}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: UnityEditor.SceneViewCameraOverlay
       index: 0
       layout: 4
@@ -940,7 +940,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -948,16 +948,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ethan.355186\Desktop\Template\Stumpy Road
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 11}
-    m_SelectedIDs: 36210000
-    m_LastClickedID: 8502
-    m_ExpandedIDs: 00000000805e0000865e000000ca9a3bffffff7f
+    m_SelectedIDs: 4e5d0000
+    m_LastClickedID: 23886
+    m_ExpandedIDs: 000000004e5d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -985,7 +985,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000805e0000
+    m_ExpandedIDs: 000000004e5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
