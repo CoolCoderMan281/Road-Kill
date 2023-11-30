@@ -14,6 +14,18 @@ public class Manager : MonoBehaviour
     public float Bounds;
     public KeyCode Left;
     public KeyCode Right;
+    public bool Debug;
+    [Header("Rage")]
+    public float RageProgress;
+    public float RageIncrement;
+    public float RageTick;
+    public float RageModifier;
+    public float RageHitReward;
+    public bool RageActive;
+    public Slider DebugRageProgressSlider;
+    public Slider RageMeterSlider;
+    public TMP_Text DebugRageProgressLabel;
+    public float Original_SpawnedObjectSpeed;
     [Header("Camera Handling")]
     public CameraHandler CameraHandler;
     public GameObject CameraTarget;
@@ -29,6 +41,8 @@ public class Manager : MonoBehaviour
 
     public void Start()
     {
+        GameObject.Find("Debug_Btn").SetActive(Debug);
+        GameObject.Find("Debug_notif").SetActive(Debug);
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 144;
         GameObject MainCamera = GameObject.Find("Main Camera");
@@ -37,6 +51,7 @@ public class Manager : MonoBehaviour
         CameraHandler.camera_tween_inbetween = 5f;
         CameraHandler.follow_type = CameraHandler.TweenType.DELTA_TIME;
         StartCoroutine(SpawnAnimals());
+        StartCoroutine(RageMeter());
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
@@ -45,6 +60,10 @@ public class Manager : MonoBehaviour
     public void Update()
     {
         HandleInput();
+        if (!RageActive)
+        {
+            Original_SpawnedObjectSpeed = SpawnedObjectSpeed;
+        }
     }
 
     // Handle movement speed update
@@ -67,6 +86,45 @@ public class Manager : MonoBehaviour
             tmp.GetComponent<Animal>().preset = rand_animal;
             yield return new WaitForSeconds(SpawnIncrement);
         }
+    }
+
+    // Handle rage meter
+    public IEnumerator RageMeter()
+    {
+        while (true)
+        {
+            if (RageProgress >= 100 && !RageActive) // Start Rage!
+            {
+                RageActive = true;
+                SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
+                StartCoroutine(RageMeterRelease());
+            }
+            if (RageProgress == 0 && RageActive) // End Rage!
+            {
+                RageActive = false;
+                SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
+                StopCoroutine(RageMeterRelease());
+            }
+            if (RageProgress < 100 && !RageActive) // Increment Rage!
+            {
+                RageProgress += RageIncrement;
+            }
+            DebugRageProgressSlider.value = RageProgress;
+            RageMeterSlider.value = RageProgress;
+            DebugRageProgressLabel.text = "Rage Progress (" + RageProgress + ")";
+            yield return new WaitForSeconds(RageTick);
+        }
+    }
+
+    // Rage meter release
+    public IEnumerator RageMeterRelease()
+    {
+        while (RageProgress > 0 && RageActive) // Active Rage!
+        {
+            RageProgress -= RageIncrement*2;
+            yield return new WaitForSeconds(RageTick);
+        }
+        RageProgress = 0;
     }
 
     // Handle Input
@@ -118,6 +176,7 @@ public class Manager : MonoBehaviour
     {
         if (preset.Animal_Type == Animal_Preset.AnimalType.Single)
         {
+            RageProgress += RageIncrement * RageHitReward;
             Destroy(obj.gameObject);
         } else
         {

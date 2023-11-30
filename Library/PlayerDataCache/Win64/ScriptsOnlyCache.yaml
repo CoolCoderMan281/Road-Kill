@@ -26,8 +26,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -84,6 +82,45 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
   - assembly: Assembly-CSharp
     fullTypeName: UiHandler
     methodName: Click
@@ -359,14 +396,50 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1592}
+    - Class: 114
+      Script: {instanceID: 2702}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3224}
+    - Class: 114
       Script: {instanceID: 3406}
     - Class: 114
+      Script: {instanceID: 5240}
+    - Class: 114
+      Script: {instanceID: 5296}
+    - Class: 114
+      Script: {instanceID: 5378}
+    - Class: 114
+      Script: {instanceID: 5652}
+    - Class: 114
       Script: {instanceID: 5764}
+    - Class: 114
+      Script: {instanceID: 5974}
+    - Class: 114
+      Script: {instanceID: 6142}
+    - Class: 114
+      Script: {instanceID: 6492}
+    - Class: 114
+      Script: {instanceID: 7300}
+    - Class: 114
+      Script: {instanceID: 7608}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -653,7 +726,7 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 603102d29d86e03040a8efe8605e6c19
+      Hash: 93902512259d6145ff6f2ba58805a036
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Manager
@@ -1307,7 +1380,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ed4b69d55230820f44fb9e967e689eed
+      Hash: 4d0230a56e93e9588f6d9a002053626a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UiHandler
@@ -1431,4 +1504,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
   - Assets/Scenes/RoadRage_Lose.unity
-  playerPath: C:/Users/ethan.355186/Desktop/0.0.5/Stumpy-Road.exe
+  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.1/Stumpy-Road.exe

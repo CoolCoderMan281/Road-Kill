@@ -14,9 +14,11 @@ public class UiHandler : MonoBehaviour
     public AudioHandler audioHandler;
     public ActionType action;
     public string action_parameter;
+    public TMP_Text action_label;
 
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
-                             UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, }
+                             UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
+                             UpdateHitRageReward, }
 
     public void Start()
     {
@@ -54,6 +56,39 @@ public class UiHandler : MonoBehaviour
                 self.value = mgr.SpawnedObjectSpeed;
                 TMP_Text label = GameObject.Find("Animal_Speed_Label").GetComponent<TMP_Text>();
                 label.text = "Animal Speed (" + mgr.SpawnedObjectSpeed + ")";
+                break;
+            case ActionType.UpdateRageIncrement:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.RageIncrement;
+                label = GameObject.Find("Rage_Increment_Label").GetComponent<TMP_Text>();
+                label.text = "Rage Increment (" + mgr.RageIncrement + ")";
+                break;
+            case ActionType.UpdateRageTick:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.RageTick;
+                label = GameObject.Find("Rage_Tick_Label").GetComponent<TMP_Text>();
+                label.text = "Rage Tick (" + mgr.RageTick + ")";
+                break;
+            case ActionType.UpdateRageProgress:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.RageProgress;
+                action_label.text = "Rage Progress (" + mgr.RageProgress + ")";
+                break;
+            case ActionType.UpdateRageSpeed:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.RageModifier;
+                label = GameObject.Find("Rage_Speed_Label").GetComponent<TMP_Text>();
+                label.text = "Rage Speed (" + mgr.RageModifier + ")";
+                break;
+            case ActionType.UpdateHitRageReward:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.RageHitReward;
+                action_label.text = "Rage Reward (" + mgr.RageHitReward + ")";
                 break;
         }
     }
@@ -136,6 +171,39 @@ public class UiHandler : MonoBehaviour
                 mgr.SpawnedObjectSpeed = self.value;
                 TMP_Text label = GameObject.Find("Animal_Speed_Label").GetComponent<TMP_Text>();
                 label.text = "Animal Speed (" + mgr.SpawnedObjectSpeed + ")";
+                break;
+            case ActionType.UpdateRageIncrement:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.RageIncrement = self.value;
+                label = GameObject.Find("Rage_Increment_Label").GetComponent<TMP_Text>();
+                label.text = "Rage Increment (" + mgr.RageIncrement + ")";
+                break;
+            case ActionType.UpdateRageTick:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.RageTick = self.value;
+                label = GameObject.Find("Rage_Tick_Label").GetComponent<TMP_Text>();
+                label.text = "Rage Tick (" + mgr.RageTick + ")";
+                break;
+            case ActionType.UpdateRageProgress:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.RageProgress = self.value;
+                action_label.text = "Rage Progress (" + mgr.RageProgress + ")";
+                break;
+            case ActionType.UpdateRageSpeed:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.RageModifier = self.value;
+                label = GameObject.Find("Rage_Speed_Label").GetComponent<TMP_Text>();
+                label.text = "Rage Speed (" + mgr.RageModifier + ")";
+                break;
+            case ActionType.UpdateHitRageReward:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.RageHitReward = self.value;
+                action_label.text = "Rage Reward (" + mgr.RageHitReward + ")";
                 break;
         }
     }
