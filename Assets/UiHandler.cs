@@ -18,7 +18,7 @@ public class UiHandler : MonoBehaviour
 
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
-                             UpdateHitRageReward, }
+                             UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, }
 
     public void Start()
     {
@@ -89,6 +89,26 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 self.value = mgr.RageHitReward;
                 action_label.text = "Rage Reward (" + mgr.RageHitReward + ")";
+                break;
+            case ActionType.UpdateCanDie:
+                Toggle toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                toggle_self.isOn = mgr.CanDie;
+                break;
+            case ActionType.UpdateCanSpawn:
+                toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                toggle_self.isOn = mgr.CanSpawn;
+                break;
+            case ActionType.UpdateCanSpawnAnimal:
+                toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                toggle_self.isOn = mgr.CanSpawnAnimals;
+                break;
+            case ActionType.UpdateCanSpawnObstacle:
+                toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                toggle_self.isOn = mgr.CanSpawnObstacles;
                 break;
         }
     }
@@ -204,6 +224,26 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.RageHitReward = self.value;
                 action_label.text = "Rage Reward (" + mgr.RageHitReward + ")";
+                break;
+            case ActionType.UpdateCanDie:
+                Toggle toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.CanDie = toggle_self.isOn;
+                break;
+            case ActionType.UpdateCanSpawn:
+                toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.CanSpawn = toggle_self.isOn;
+                break;
+            case ActionType.UpdateCanSpawnAnimal:
+                toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.CanSpawnAnimals = toggle_self.isOn;
+                break;
+            case ActionType.UpdateCanSpawnObstacle:
+                toggle_self = gameObject.GetComponent<Toggle>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.CanSpawnObstacles = toggle_self.isOn;
                 break;
         }
     }

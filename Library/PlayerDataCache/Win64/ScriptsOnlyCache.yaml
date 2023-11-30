@@ -178,6 +178,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UiHandler
     methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
   sceneClasses:
     Assets/Scenes/InitScene.unity:
     - Class: 1
@@ -223,23 +235,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 4260}
+      Script: {instanceID: 4258}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 4340}
     - Class: 114
-      Script: {instanceID: 4618}
+      Script: {instanceID: 4616}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5972}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 7606}
     - Class: 114
-      Script: {instanceID: 8302}
+      Script: {instanceID: 8300}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -288,23 +300,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5240}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5294}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5650}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5972}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 7298}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 7606}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -345,17 +357,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5972}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 7298}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 7606}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -404,27 +416,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5240}
+      Script: {instanceID: 5294}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5650}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5762}
     - Class: 114
-      Script: {instanceID: 5764}
+      Script: {instanceID: 5972}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 7298}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 7606}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 8502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -724,12 +736,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformParentChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 93902512259d6145ff6f2ba58805a036
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Manager
   - hash:
       serializedVersion: 2
       Hash: 0249933f35dcc970b31eaae0159aebf9
@@ -1498,10 +1504,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b22d14a3f31ab525a1b12efafa18bc75
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Manager
   platform: 19
   scenePathNames:
   - Assets/Scenes/InitScene.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
   - Assets/Scenes/RoadRage_Lose.unity
-  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.1/Stumpy-Road.exe
+  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.2/Stumpy-Road.exe
