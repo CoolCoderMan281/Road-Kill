@@ -123,12 +123,16 @@ public class Manager : MonoBehaviour
                 RageActive = true;
                 SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
                 StartCoroutine(RageMeterRelease());
+
+                Camera.main.fieldOfView = 75;
             }
             if (RageProgress == 0 && RageActive) // End Rage!
             {
                 RageActive = false;
                 SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
                 StopCoroutine(RageMeterRelease());
+
+                Camera.main.fieldOfView = 40;
             }
             if (RageProgress < 100 && !RageActive) // Increment Rage!
             {
