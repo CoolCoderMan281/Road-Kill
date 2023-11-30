@@ -20,8 +20,8 @@ public class UiHandler : MonoBehaviour
 
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
-                             UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects, 
-                             ObjectSelector, ObjectType, }
+                             UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, }
 
     public void OnApplicationQuit()
     {
@@ -157,6 +157,16 @@ public class UiHandler : MonoBehaviour
                         }
                     }
                 }
+                break;
+            case ActionType.UpdateCamFOV:
+                self = gameObject.GetComponent<Slider>();
+                self.value = cameraHandler.camera.GetComponent<Camera>().fieldOfView;
+                action_label.text = "CamFOV (" + self.value + ")";
+                break;
+            case ActionType.UpdateCamXRot:
+                self = gameObject.GetComponent<Slider>();
+                self.value = cameraHandler.camera.transform.rotation.x;
+                action_label.text = "CamX Rot (" + self.value + ")";
                 break;
         }
     }
@@ -338,6 +348,18 @@ public class UiHandler : MonoBehaviour
                         }
                     }
                 }
+                break;
+            case ActionType.UpdateCamFOV:
+                self = gameObject.GetComponent<Slider>();
+                cameraHandler.camera.GetComponent<Camera>().fieldOfView = self.value;
+                action_label.text = "CamFOV (" + self.value + ")";
+                break;
+            case ActionType.UpdateCamXRot:
+                self = gameObject.GetComponent<Slider>();
+                Quaternion rotation = cameraHandler.camera.transform.rotation;
+                rotation.x = self.value/180;
+                cameraHandler.camera.transform.rotation = rotation;
+                action_label.text = "CamX Rot (" + self.value + ")";
                 break;
         }
     }

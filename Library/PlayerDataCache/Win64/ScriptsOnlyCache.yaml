@@ -211,6 +211,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UiHandler
     methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
   sceneClasses:
     Assets/Scenes/InitScene.unity:
     - Class: 1
@@ -244,35 +250,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 1896}
+      Script: {instanceID: 2228}
     - Class: 114
-      Script: {instanceID: 2230}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2308}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 4336}
     - Class: 114
-      Script: {instanceID: 4260}
+      Script: {instanceID: 4610}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 5370}
     - Class: 114
-      Script: {instanceID: 4618}
+      Script: {instanceID: 5964}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 6132}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 6482}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 8546}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 8550}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 8566}
     - Class: 114
-      Script: {instanceID: 8302}
+      Script: {instanceID: 8570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -315,29 +321,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 5240}
+      Script: {instanceID: 5232}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5288}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5370}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5644}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5964}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6132}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6482}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 8542}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 8570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -372,23 +378,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5370}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5964}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6132}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6482}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 8542}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 8570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -431,41 +437,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 4060}
     - Class: 114
-      Script: {instanceID: 4064}
+      Script: {instanceID: 5232}
     - Class: 114
-      Script: {instanceID: 5240}
+      Script: {instanceID: 5288}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5370}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5644}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5964}
     - Class: 114
-      Script: {instanceID: 5764}
+      Script: {instanceID: 6132}
     - Class: 114
-      Script: {instanceID: 5974}
-    - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6482}
     - Class: 114
       Script: {instanceID: 6492}
     - Class: 114
-      Script: {instanceID: 6502}
+      Script: {instanceID: 7650}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 8542}
     - Class: 114
-      Script: {instanceID: 7608}
+      Script: {instanceID: 8558}
     - Class: 114
-      Script: {instanceID: 7664}
+      Script: {instanceID: 8562}
+    - Class: 114
+      Script: {instanceID: 8570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -555,12 +561,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 290353d4dc4de77ae1cc8f82cbe987f4
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraHandler
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -767,12 +767,6 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b4489b06515e12d5db2386ae00a0cbee
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Manager
-  - hash:
-      serializedVersion: 2
       Hash: 0249933f35dcc970b31eaae0159aebf9
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -917,12 +911,6 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 8e3f7fdeb2024956f84d382bca4cc8d5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LevelManager
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -975,12 +963,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.OnScreen
     className: OnScreenStick
-  - hash:
-      serializedVersion: 2
-      Hash: 742e15415b55a1a9497fbb1c0841cde9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Animal
   - hash:
       serializedVersion: 2
       Hash: fcc569162a8d9bd9df34e8c9dee84212
@@ -1155,12 +1137,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CarCollision
   - hash:
       serializedVersion: 2
       Hash: 654cebef8aa88cb6cd0504505364d614
@@ -1385,12 +1361,6 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 0c6b218187b837dd0151aa145ead4cbd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MenuHandler
-  - hash:
-      serializedVersion: 2
       Hash: 53c46bce503f838890a138bb8aac7598
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
@@ -1419,12 +1389,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 4d0230a56e93e9588f6d9a002053626a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UiHandler
   - hash:
       serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
@@ -1493,12 +1457,6 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 24834de0b889738e8e3052c0c4bf36ba
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AudioHandler
-  - hash:
-      serializedVersion: 2
       Hash: afe1800287c9574079eab3fea2622416
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1539,10 +1497,58 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0c6b218187b837dd0151aa145ead4cbd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 290353d4dc4de77ae1cc8f82cbe987f4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 8e3f7fdeb2024956f84d382bca4cc8d5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelManager
+  - hash:
+      serializedVersion: 2
+      Hash: 742e15415b55a1a9497fbb1c0841cde9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Animal
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CarCollision
+  - hash:
+      serializedVersion: 2
+      Hash: b4489b06515e12d5db2386ae00a0cbee
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Manager
+  - hash:
+      serializedVersion: 2
+      Hash: 24834de0b889738e8e3052c0c4bf36ba
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 4d0230a56e93e9588f6d9a002053626a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UiHandler
   platform: 19
   scenePathNames:
   - Assets/Scenes/InitScene.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
   - Assets/Scenes/RoadRage_Lose.unity
-  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.3/Stumpy-Road.exe
+  playerPath: C:/Users/ethan.355186/Desktop/0.1.3/Stumpy-Road.exe

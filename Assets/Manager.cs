@@ -182,7 +182,8 @@ public class Manager : MonoBehaviour
             {
                 Player_Obj.transform.position = new Vector3(-Bounds, 0, 0);
             }
-        } else if (Input.GetKey(Right))
+        }
+        if (Input.GetKey(Right))
         {
             // Right
             Vector3 newPosition = Player_Obj.transform.position;

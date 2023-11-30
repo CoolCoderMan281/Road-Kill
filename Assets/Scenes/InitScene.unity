@@ -608,6 +608,7 @@ MonoBehaviour:
   audioHandler: {fileID: 0}
   action: 2
   action_parameter: 
+  action_label: {fileID: 0}
 --- !u!1 &493344654
 GameObject:
   m_ObjectHideFlags: 0
