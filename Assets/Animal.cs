@@ -24,25 +24,33 @@ public class Animal : MonoBehaviour
 
     public void Update()
     {
-        Increment = manager.SpawnedObjectSpeed;
-        Vector3 newPos = transform.position;
-        newPos.z -= Increment;
-        newPos.y = 0.5f;
-        transform.position = newPos;
-        if (newPos.z < -10)
+        if (!manager.Pause)
         {
-            manager.HandleMiss(gameObject,preset);
+            Increment = manager.SpawnedObjectSpeed;
+            Vector3 newPos = transform.position;
+            newPos.z -= Increment;
+            newPos.y = 0.5f;
+            transform.position = newPos;
+            if (newPos.z < -10)
+            {
+                manager.HandleMiss(gameObject, preset);
+            }
+            target.y = newPos.y;
+            target.z = newPos.z;
+            newPos = Vector3.Lerp(newPos, target, 0.005f);
+            transform.position = newPos;
         }
-        target.y = newPos.y;
-        target.z = newPos.z;
-        newPos = Vector3.Lerp(newPos, target, 0.005f);
-        transform.position = newPos;
     }
 
     public IEnumerator Walking()
     {
         while (true)
         {
+            if (manager.Pause)
+            {
+                yield return new WaitForSeconds(0.5f);
+                break;
+            }
             Vector3 newPos = transform.position;
             if (preset.Moves)
             {

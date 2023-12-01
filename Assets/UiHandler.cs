@@ -21,7 +21,7 @@ public class UiHandler : MonoBehaviour
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
                              UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
-                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, }
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize,  }
 
     public void OnApplicationQuit()
     {
@@ -167,6 +167,12 @@ public class UiHandler : MonoBehaviour
                 self = gameObject.GetComponent<Slider>();
                 self.value = cameraHandler.camera.transform.rotation.x;
                 action_label.text = "CamX Rot (" + self.value + ")";
+                break;
+            case ActionType.UpdateSize:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.Size;
+                action_label.text = "Car Scale (" + self.value + ")";
                 break;
         }
     }
@@ -360,6 +366,13 @@ public class UiHandler : MonoBehaviour
                 rotation.x = self.value/180;
                 cameraHandler.camera.transform.rotation = rotation;
                 action_label.text = "CamX Rot (" + self.value + ")";
+                break;
+            case ActionType.UpdateSize:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.Size = self.value;
+                action_label.text = "Car Scale (" + self.value + ")";
+                mgr.PlayerSizeUpdate();
                 break;
         }
     }

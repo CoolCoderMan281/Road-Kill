@@ -10,12 +10,16 @@ public class Manager : MonoBehaviour
 {
     [Header("Player")]
     public GameObject Player_Obj;
+    public GameObject Car_Obj;
     public float MovementIncrement;
     public float Bounds;
     public KeyCode Left;
     public KeyCode Right;
     public bool Debug;
     public bool CanDie;
+    public float Size;
+    public bool Pause;
+    public Vector3 trueSize;
     [Header("Rage")]
     public float RageProgress;
     public float RageIncrement;
@@ -60,6 +64,25 @@ public class Manager : MonoBehaviour
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
+        trueSize = Car_Obj.transform.localScale;
+        PlayerSizeUpdate();
+    }
+
+    public void PlayerSizeUpdate()
+    {
+        Vector3 scale = trueSize;
+        scale.x = Size;
+        scale.y = (Size*2);
+        scale.z = (Size * 0.8f);
+        UnityEngine.Debug.Log("Scale: " + Size);
+        UnityEngine.Debug.Log(Size * 0.8f);
+        UnityEngine.Debug.Log(scale.x);
+        UnityEngine.Debug.Log(scale.y);
+        UnityEngine.Debug.Log(scale.z);
+        Vector3 pos = Car_Obj.transform.position;
+        pos.y = scale.y / 1.5f;
+        Car_Obj.transform.position = pos;
+        Car_Obj.transform.localScale = scale;
     }
 
     public void OnApplicationQuit()
@@ -69,8 +92,15 @@ public class Manager : MonoBehaviour
 
     public void Update()
     {
-        HandleInput();
-        if (!RageActive)
+        if (menuHandler.currentMenu == menuHandler.GetMenuByName("pause"))
+        {
+            Pause = true;
+        } else
+        {
+            Pause = false;
+        }
+        HandleInput(); 
+        if (!RageActive && !Pause)
         {
             Original_SpawnedObjectSpeed = SpawnedObjectSpeed;
         }
@@ -88,7 +118,7 @@ public class Manager : MonoBehaviour
     {
         while (true)
         {
-            if (CanSpawn)
+            if (CanSpawn && !Pause)
             {
                 Animal_Preset rand_animal = Animals[UnityEngine.Random.Range(0, Animals.Count)];
                 if ((rand_animal.Animal_Type == Animal_Preset.AnimalType.Single && CanSpawnAnimals) || (rand_animal.Animal_Type == Animal_Preset.AnimalType.Obstacle && CanSpawnObstacles))
@@ -118,26 +148,33 @@ public class Manager : MonoBehaviour
     {
         while (true)
         {
-            if (RageProgress >= 100 && !RageActive) // Start Rage!
+            if (Pause)
             {
-                RageActive = true;
-                SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
-                StartCoroutine(RageMeterRelease());
+                yield return new WaitForSeconds(RageTick);
             }
-            if (RageProgress == 0 && RageActive) // End Rage!
+            else
             {
-                RageActive = false;
-                SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
-                StopCoroutine(RageMeterRelease());
+                if (RageProgress >= 100 && !RageActive) // Start Rage!
+                {
+                    RageActive = true;
+                    SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
+                    StartCoroutine(RageMeterRelease());
+                }
+                if (RageProgress == 0 && RageActive) // End Rage!
+                {
+                    RageActive = false;
+                    SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
+                    StopCoroutine(RageMeterRelease());
+                }
+                if (RageProgress < 100 && !RageActive) // Increment Rage!
+                {
+                    RageProgress += RageIncrement;
+                }
+                DebugRageProgressSlider.value = RageProgress;
+                RageMeterSlider.value = RageProgress;
+                DebugRageProgressLabel.text = "Rage Progress (" + RageProgress + ")";
+                yield return new WaitForSeconds(RageTick);
             }
-            if (RageProgress < 100 && !RageActive) // Increment Rage!
-            {
-                RageProgress += RageIncrement;
-            }
-            DebugRageProgressSlider.value = RageProgress;
-            RageMeterSlider.value = RageProgress;
-            DebugRageProgressLabel.text = "Rage Progress (" + RageProgress + ")";
-            yield return new WaitForSeconds(RageTick);
         }
     }
 
@@ -146,6 +183,10 @@ public class Manager : MonoBehaviour
     {
         while (RageProgress > 0 && RageActive) // Active Rage!
         {
+            if (Pause)
+            {
+                yield return new WaitForSeconds(RageTick);
+            }
             RageProgress -= RageIncrement*2;
             yield return new WaitForSeconds(RageTick);
         }
@@ -170,29 +211,32 @@ public class Manager : MonoBehaviour
                 uih.Click();
             }
         }
-        if (Input.GetKey(Left))
+        if (!Pause)
         {
-            // Left
-            Vector3 newPosition = Player_Obj.transform.position;
-            newPosition.x -= MovementIncrement/15;
-            Player_Obj.transform.position = newPosition;
-            // Max bounds
-            if (Player_Obj.transform.position.x < -Bounds)
+            if (Input.GetKey(Left) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                // Left
+                Vector3 newPosition = Player_Obj.transform.position;
+                newPosition.x -= MovementIncrement / 15;
+                Player_Obj.transform.position = newPosition;
+                // Max bounds
+                if (Player_Obj.transform.position.x < -Bounds)
 
-            {
-                Player_Obj.transform.position = new Vector3(-Bounds, 0, 0);
+                {
+                    Player_Obj.transform.position = new Vector3(-Bounds, 0, 0);
+                }
             }
-        }
-        if (Input.GetKey(Right))
-        {
-            // Right
-            Vector3 newPosition = Player_Obj.transform.position;
-            newPosition.x += MovementIncrement/15;
-            Player_Obj.transform.position = newPosition;
-            // Max bounds
-            if (Player_Obj.transform.position.x > Bounds)
+            if (Input.GetKey(Right) || Input.GetKey(KeyCode.RightArrow))
             {
-                Player_Obj.transform.position = new Vector3(Bounds, 0, 0);
+                // Right
+                Vector3 newPosition = Player_Obj.transform.position;
+                newPosition.x += MovementIncrement / 15;
+                Player_Obj.transform.position = newPosition;
+                // Max bounds
+                if (Player_Obj.transform.position.x > Bounds)
+                {
+                    Player_Obj.transform.position = new Vector3(Bounds, 0, 0);
+                }
             }
         }
     }
