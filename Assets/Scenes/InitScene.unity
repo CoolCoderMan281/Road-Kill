@@ -608,6 +608,7 @@ MonoBehaviour:
   audioHandler: {fileID: 0}
   action: 2
   action_parameter: 
+  action_label: {fileID: 0}
 --- !u!1 &493344654
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +704,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
