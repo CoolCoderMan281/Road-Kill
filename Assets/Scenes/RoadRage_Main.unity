@@ -8594,6 +8594,7 @@ MonoBehaviour:
   Original_SpawnedObjectSpeed: 0
   CameraHandler: {fileID: 0}
   CameraTarget: {fileID: 649505872}
+  FOV: 0
   CanSpawn: 1
   CanSpawnAnimals: 1
   CanSpawnObstacles: 1

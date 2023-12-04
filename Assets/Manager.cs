@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -37,6 +38,7 @@ public class Manager : MonoBehaviour
     [Header("Camera Handling")]
     public CameraHandler CameraHandler;
     public GameObject CameraTarget;
+    public float FOV;
     [Header("Spawning")]
     public bool CanSpawn;
     public bool CanSpawnAnimals;
@@ -69,6 +71,40 @@ public class Manager : MonoBehaviour
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
         trueSize = Car_Obj.transform.localScale;
         PlayerSizeUpdate();
+        FOV = CameraHandler.camera.GetComponent<Camera>().fieldOfView;
+    }
+
+    public IEnumerator ChangeCamFOV(float next)
+    {
+        UnityEngine.Debug.Log(next);
+        Vector3 nextFOV = new Vector3(next, 0, 0);
+        Vector3 current = new Vector3(CameraHandler.GetComponent<Camera>().fieldOfView, 0, 0);
+        bool error;
+        if (next < current.x) { error = true; }
+        else { error = false; }
+        while (true)
+        {
+            current = new Vector3(CameraHandler.GetComponent<Camera>().fieldOfView, 0, 0);
+            UnityEngine.Debug.Log(current.x);
+            int fov = (int)(Vector3.Lerp(current, nextFOV, 0.0025f).x);
+            UnityEngine.Debug.Log(fov);
+            CameraHandler.GetComponent<Camera>().fieldOfView = fov;
+            if (fov <= next+0.25f && error)
+            {
+                UnityEngine.Debug.Log("Done");
+                CameraHandler.GetComponent<Camera>().fieldOfView = next;
+                break;
+            } else if (fov >= next-0.25f && !error)
+            {
+                UnityEngine.Debug.Log("Done");
+                CameraHandler.GetComponent<Camera>().fieldOfView = next;
+                break;
+            } 
+            else
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
     }
 
     public void PlayerSizeUpdate()
@@ -162,12 +198,14 @@ public class Manager : MonoBehaviour
                     RageActive = true;
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
                     StartCoroutine(RageMeterRelease());
+                    StartCoroutine(ChangeCamFOV(FOV / 2));
                 }
                 if (RageProgress == 0 && RageActive) // End Rage!
                 {
                     RageActive = false;
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
                     StopCoroutine(RageMeterRelease());
+                    StartCoroutine(ChangeCamFOV(FOV));
                 }
                 if (RageProgress < 100 && !RageActive) // Increment Rage!
                 {
@@ -257,6 +295,7 @@ public class Manager : MonoBehaviour
         {
             if (CanDie)
             {
+                CameraHandler.GetComponent<Camera>().fieldOfView = FOV;
                 Objects.Remove(obj);
                 Destroy(obj.gameObject);
                 levelManager.SetLevel(levelManager.GetLevelByName("RoadRage_Lose"));
