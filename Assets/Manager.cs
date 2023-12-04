@@ -43,6 +43,7 @@ public class Manager : MonoBehaviour
     public MenuHandler menuHandler;
     public Slider Car_Speed_Slider;
     public TMP_Text Car_Speed_Label;
+    public int CameraFOV = 55;
 
     public void Start()
     {
@@ -55,11 +56,13 @@ public class Manager : MonoBehaviour
         CameraHandler.camera_target_object = CameraTarget;
         CameraHandler.camera_tween_inbetween = 5f;
         CameraHandler.follow_type = CameraHandler.TweenType.DELTA_TIME;
+        Camera.main.fieldOfView = CameraFOV;
         StartCoroutine(SpawnAnimals());
         StartCoroutine(RageMeter());
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
+        
     }
 
     public void OnApplicationQuit()
@@ -124,7 +127,8 @@ public class Manager : MonoBehaviour
                 SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
                 StartCoroutine(RageMeterRelease());
 
-                Camera.main.fieldOfView = 90;
+                CameraFOV = 90;
+                Camera.main.fieldOfView = CameraFOV;
             }
             if (RageProgress == 0 && RageActive) // End Rage!
             {
@@ -133,7 +137,8 @@ public class Manager : MonoBehaviour
                 SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
                 StopCoroutine(RageMeterRelease());
 
-                Camera.main.fieldOfView = 40;
+                CameraFOV = 55;
+                Camera.main.fieldOfView = CameraFOV;
             }
             if (RageProgress < 100 && !RageActive) // Increment Rage!
             {
@@ -152,6 +157,10 @@ public class Manager : MonoBehaviour
         while (RageProgress > 0 && RageActive) // Active Rage!
         {
             RageProgress -= RageIncrement*2;
+            if (RageProgress % 3 == 0)
+            {
+                Camera.main.fieldOfView = CameraFOV--;
+            }
             yield return new WaitForSeconds(RageTick);
         }
         RageProgress = 0;
