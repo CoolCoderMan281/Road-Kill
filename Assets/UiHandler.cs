@@ -21,7 +21,7 @@ public class UiHandler : MonoBehaviour
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
                              UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
-                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize,  }
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff }
 
     public void OnApplicationQuit()
     {
@@ -173,6 +173,12 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 self.value = mgr.Size;
                 action_label.text = "Car Scale (" + self.value + ")";
+                break;
+            case ActionType.UpdateBoostBuff:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.Forward_Increase;
+                action_label.text = "Boost buff (" + self.value + ")";
                 break;
         }
     }
@@ -373,6 +379,12 @@ public class UiHandler : MonoBehaviour
                 mgr.Size = self.value;
                 action_label.text = "Car Scale (" + self.value + ")";
                 mgr.PlayerSizeUpdate();
+                break;
+            case ActionType.UpdateBoostBuff:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.Forward_Increase = self.value;
+                action_label.text = "Boost buff (" + self.value + ")";
                 break;
         }
     }

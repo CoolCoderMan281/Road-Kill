@@ -1,326 +1,301 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1701400660235189, "dur":8047, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400660243240, "dur":67, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400660243330, "dur":695, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400660245411, "dur":134, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":0, "ts":1701400660244046, "dur":1927, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400660245973, "dur":12314506, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400672560480, "dur":497, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400672560978, "dur":87, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400672561068, "dur":58, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701400672561378, "dur":2455, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1701400660243842, "dur":2135, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1701400660245979, "dur":3571, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1701400660590804, "dur":12689, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/csharpactions/boot.config_tyr4.info" }}
-,{ "pid":12345, "tid":1, "ts":1701400660603497, "dur":296, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701400660603801, "dur":282, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":1, "ts":1701400660604084, "dur":355, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":1, "ts":1701400660604585, "dur":216, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400660604802, "dur":9611, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400660614414, "dur":319978, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400660934394, "dur":286, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400660934681, "dur":5722, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400660940404, "dur":21298, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400660961704, "dur":310942, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400661272647, "dur":18950, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400661291598, "dur":16708, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":1, "ts":1701400661308346, "dur":205100, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Player674d58e7-inputdata.json" }}
-,{ "pid":12345, "tid":1, "ts":1701400660603496, "dur":910084, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701400661513745, "dur":72, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1701400661522041, "dur":10112653, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701400671637333, "dur":184, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701400671637333, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701400671637528, "dur":990, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701400671638519, "dur":922034, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701400660243907, "dur":2103, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701400660246012, "dur":968, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701400660246980, "dur":2598, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701400660249593, "dur":231, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
-,{ "pid":12345, "tid":2, "ts":1701400660249579, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":2, "ts":1701400660961778, "dur":346793, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":2, "ts":1701400661308632, "dur":212274, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":2, "ts":1701400661521032, "dur":2035255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1701400663556343, "dur":2953757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1701400666510140, "dur":3372434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1701400669882612, "dur":1658653, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level3" }}
-,{ "pid":12345, "tid":2, "ts":1701400671541317, "dur":1019164, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701400660243857, "dur":2127, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701400660245991, "dur":911, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701400660246902, "dur":2688, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701400660249605, "dur":315, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701400660249591, "dur":330, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701400665331361, "dur":3005111, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701400668336522, "dur":3453649, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701400671790194, "dur":770336, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701400660243889, "dur":2112, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701400660246007, "dur":940, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701400660246948, "dur":2638, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701400660249588, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1701400661291664, "dur":224953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1701400661516650, "dur":1041885, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701400662558573, "dur":2638835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701400665197445, "dur":3387810, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701400668585283, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityPlayer.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701400668585283, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701400668585362, "dur":3579416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701400672164802, "dur":395742, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701400660243925, "dur":2090, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701400660246017, "dur":876, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701400660246894, "dur":2666, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701400660249598, "dur":298, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
-,{ "pid":12345, "tid":5, "ts":1701400660249578, "dur":319, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":5, "ts":1701400664074867, "dur":2435409, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":5, "ts":1701400666510318, "dur":3598726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701400670109086, "dur":1432496, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level2" }}
-,{ "pid":12345, "tid":5, "ts":1701400671541621, "dur":1018911, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701400660244532, "dur":1709, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701400660246241, "dur":3314, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701400660249574, "dur":345, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
-,{ "pid":12345, "tid":6, "ts":1701400660249560, "dur":360, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":6, "ts":1701400666990075, "dur":3119203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":6, "ts":1701400670109323, "dur":1431982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level1.resS" }}
-,{ "pid":12345, "tid":6, "ts":1701400671541349, "dur":1019151, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1701400660243974, "dur":2052, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1701400660246029, "dur":945, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1701400660246974, "dur":2638, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1701400660255227, "dur":699146, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":7, "ts":1701400660954403, "dur":1094921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":7, "ts":1701400662049355, "dur":2411894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1701400664461287, "dur":3965884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1701400668427208, "dur":3588749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1701400672015985, "dur":544540, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1701400660244048, "dur":2001, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1701400660246056, "dur":894, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1701400660246951, "dur":2618, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1701400660249569, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":8, "ts":1701400660249730, "dur":51, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1701400660604772, "dur":330056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":8, "ts":1701400660934871, "dur":705195, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":8, "ts":1701400661640141, "dur":2644348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1701400664284526, "dur":3663530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1701400667948095, "dur":4124418, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1701400672072537, "dur":487989, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1701400660244079, "dur":1998, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1701400660246083, "dur":753, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1701400660246837, "dur":2768, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1701400660251850, "dur":335678, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400660587566, "dur":346302, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400660933951, "dur":362603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400661296585, "dur":222519, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400661519138, "dur":1715749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400663234925, "dur":842117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400664077079, "dur":1254551, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400665331670, "dur":1660202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400666991911, "dur":1595557, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1701400668587524, "dur":1522626, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":9, "ts":1701400670110208, "dur":730805, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level1" }}
-,{ "pid":12345, "tid":9, "ts":1701400670841051, "dur":1719425, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1701400660244107, "dur":1982, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1701400660246090, "dur":3469, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1701400660249559, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":10, "ts":1701400660256258, "dur":347358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":10, "ts":1701400660603673, "dur":357856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":10, "ts":1701400660961579, "dur":1080205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":10, "ts":1701400662041822, "dur":2435627, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1701400664477506, "dur":3584490, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1701400668062033, "dur":527117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1701400668589176, "dur":1936668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":10, "ts":1701400670525866, "dur":2034608, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1701400660244125, "dur":1988, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1701400660246114, "dur":3443, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1701400660249558, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":11, "ts":1701400660603544, "dur":330377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":11, "ts":1701400660934054, "dur":375456, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":11, "ts":1701400661309538, "dur":211950, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":11, "ts":1701400661521516, "dur":1851072, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1701400663372630, "dur":3744385, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1701400667117052, "dur":1471204, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1701400668588295, "dur":1762422, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":11, "ts":1701400670350744, "dur":685538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":11, "ts":1701400671036304, "dur":1524187, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1701400660244156, "dur":1971, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1701400660246127, "dur":3426, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1701400660249569, "dur":119, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":12, "ts":1701400660249558, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":12, "ts":1701400660249727, "dur":56, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1701400660615523, "dur":349018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":12, "ts":1701400660964580, "dur":327095, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":12, "ts":1701400660964579, "dur":327098, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":12, "ts":1701400661291698, "dur":226178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":12, "ts":1701400661517903, "dur":1338445, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1701400662856387, "dur":2746966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1701400665603396, "dur":3918334, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1701400669521785, "dur":1220229, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/resources.assets" }}
-,{ "pid":12345, "tid":12, "ts":1701400670742051, "dur":1818436, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1701400660244189, "dur":1951, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1701400660246140, "dur":3432, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1701400660249573, "dur":375, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":13, "ts":1701400671541718, "dur":3374, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":13, "ts":1701400671545127, "dur":1015391, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1701400660244229, "dur":1921, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1701400660246151, "dur":3462, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1701400660254510, "dur":359925, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400660614462, "dur":676935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400661291429, "dur":225131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400661516595, "dur":926236, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400662442885, "dur":2311849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400664754773, "dur":578287, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400665333094, "dur":1659259, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400666992394, "dur":1595705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1701400668588141, "dur":1632453, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":14, "ts":1701400670220642, "dur":621047, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":14, "ts":1701400670841709, "dur":1718808, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1701400660244253, "dur":1904, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1701400660246157, "dur":3395, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1701400660249564, "dur":528, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1701400671575731, "dur":1492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/app.info" }}
-,{ "pid":12345, "tid":15, "ts":1701400671577224, "dur":983281, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1701400660244277, "dur":1886, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1701400660246163, "dur":3405, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1701400660249594, "dur":294, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":16, "ts":1701400662963406, "dur":1430671, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":16, "ts":1701400664394112, "dur":3513202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1701400667907369, "dur":3668259, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1701400671575653, "dur":984869, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1701400660244305, "dur":1864, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1701400660246169, "dur":3396, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1701400660249579, "dur":359, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
-,{ "pid":12345, "tid":17, "ts":1701400660249567, "dur":372, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":17, "ts":1701400670741077, "dur":803043, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":17, "ts":1701400671544160, "dur":1016342, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1701400660244328, "dur":1848, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1701400660246176, "dur":3424, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1701400660250946, "dur":352523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":18, "ts":1701400660603496, "dur":349326, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":18, "ts":1701400660952858, "dur":706277, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":18, "ts":1701400661659174, "dur":2734627, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1701400664393849, "dur":3483203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.PropertiesModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1701400667877091, "dur":711668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1701400668588808, "dur":1937131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":18, "ts":1701400670525960, "dur":2034506, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1701400660244348, "dur":1832, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1701400660246180, "dur":3390, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1701400660249591, "dur":232, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
-,{ "pid":12345, "tid":19, "ts":1701400660249571, "dur":252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":19, "ts":1701400660934786, "dur":337886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":19, "ts":1701400661272711, "dur":242747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":19, "ts":1701400661515500, "dur":936590, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":19, "ts":1701400662452124, "dur":3278291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1701400665730453, "dur":3673553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1701400669404045, "dur":1337974, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":19, "ts":1701400670742053, "dur":1818415, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1701400660244370, "dur":1818, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1701400660246189, "dur":3393, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1701400660249596, "dur":358, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
-,{ "pid":12345, "tid":20, "ts":1701400660249583, "dur":372, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":20, "ts":1701400671544500, "dur":1754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":20, "ts":1701400671546287, "dur":1014219, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1701400660244391, "dur":1803, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1701400660246194, "dur":3394, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1701400660249589, "dur":277, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":21, "ts":1701400661518178, "dur":121891, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":21, "ts":1701400661640108, "dur":2434544, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1701400664074694, "dur":3142513, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1701400667217250, "dur":4322224, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1701400671539505, "dur":1020985, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1701400660244409, "dur":1794, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1701400660246204, "dur":3392, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1701400660249597, "dur":258, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":22, "ts":1701400661513724, "dur":8238, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":22, "ts":1701400661521995, "dur":2133918, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1701400663655956, "dur":2893171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1701400666549169, "dur":3460875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1701400670010077, "dur":1531426, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level2.resS" }}
-,{ "pid":12345, "tid":22, "ts":1701400671541536, "dur":1018983, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1701400660244439, "dur":1774, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1701400660246213, "dur":3361, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1701400660249575, "dur":308, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":23, "ts":1701400662049597, "dur":1185806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":23, "ts":1701400663235441, "dur":2883100, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1701400666118586, "dur":3695206, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1701400669813826, "dur":1727770, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level3.resS" }}
-,{ "pid":12345, "tid":23, "ts":1701400671541631, "dur":1018893, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1701400660244459, "dur":1761, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1701400660246220, "dur":3384, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1701400660253137, "dur":348226, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":24, "ts":1701400660601395, "dur":338963, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":24, "ts":1701400660940394, "dur":699015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":24, "ts":1701400661639458, "dur":2136185, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1701400663775701, "dur":3830886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1701400667606642, "dur":981820, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1701400668588500, "dur":1763292, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":24, "ts":1701400670351827, "dur":684453, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":24, "ts":1701400671036302, "dur":1524211, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1701400660244487, "dur":1740, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1701400660246228, "dur":3345, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1701400660249593, "dur":361, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
-,{ "pid":12345, "tid":25, "ts":1701400660249574, "dur":381, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":25, "ts":1701400671545262, "dur":30703, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":25, "ts":1701400671576006, "dur":984509, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1701400660244506, "dur":1728, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1701400660246235, "dur":3341, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1701400660249580, "dur":392, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":26, "ts":1701400671546237, "dur":30872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":26, "ts":1701400671577139, "dur":983357, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1701400660243944, "dur":2076, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1701400660246023, "dur":855, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1701400660246879, "dur":2684, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1701400660249564, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":27, "ts":1701400660591997, "dur":13160, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":27, "ts":1701400660605186, "dur":666984, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400661272217, "dur":19306, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\AweSnap\\Documents\\GitHub\\Stumpy-Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400661272216, "dur":19309, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400661291542, "dur":225495, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400661517065, "dur":987353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400662504459, "dur":460694, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400662965189, "dur":1110916, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400664076148, "dur":1255569, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400665331747, "dur":1660268, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400666992055, "dur":1595354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1701400668587475, "dur":1522709, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets3.assets" }}
-,{ "pid":12345, "tid":27, "ts":1701400670110217, "dur":730605, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level0.resS" }}
-,{ "pid":12345, "tid":27, "ts":1701400670840848, "dur":1719635, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1701400660244552, "dur":1693, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1701400660246245, "dur":3335, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1701400660249590, "dur":345, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":28, "ts":1701400668587119, "dur":2953033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":28, "ts":1701400671540182, "dur":1020311, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1701400660244576, "dur":1670, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1701400660246247, "dur":3351, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1701400660252312, "dur":363294, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400660615636, "dur":692399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400661308067, "dur":210383, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Unity.InputSystem.ForUI.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400661518482, "dur":1444430, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400662962966, "dur":3053546, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400666016553, "dur":976367, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400666992950, "dur":1594654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
-,{ "pid":12345, "tid":29, "ts":1701400668587649, "dur":1522603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":29, "ts":1701400670110282, "dur":730734, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/level0" }}
-,{ "pid":12345, "tid":29, "ts":1701400670841041, "dur":1719500, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1701400660244598, "dur":1651, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1701400660246249, "dur":3345, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1701400660249625, "dur":256, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
-,{ "pid":12345, "tid":30, "ts":1701400660249607, "dur":275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road.exe" }}
-,{ "pid":12345, "tid":30, "ts":1701400661522049, "dur":1040980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road.exe" }}
-,{ "pid":12345, "tid":30, "ts":1701400662563063, "dur":2766857, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":30, "ts":1701400665329979, "dur":3837740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":30, "ts":1701400669167777, "dur":2373266, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":30, "ts":1701400671541072, "dur":1019438, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1701400660244624, "dur":1630, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1701400660246254, "dur":3353, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1701400660253837, "dur":336693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400660590565, "dur":922832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400661513445, "dur":8441, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400661521918, "dur":2105631, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400663627593, "dur":3361737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400666989369, "dur":1438510, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400668427915, "dur":300676, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":31, "ts":1701400668728624, "dur":2013041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":31, "ts":1701400670741698, "dur":1818773, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1701400660244641, "dur":1617, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1701400660246259, "dur":3333, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1701400660249610, "dur":335, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":32, "ts":1701400660249595, "dur":351, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":32, "ts":1701400671540866, "dur":1019515, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/AweSnap/Desktop/Builds/0.1.4/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":0, "ts":1701400672565981, "dur":867, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1701721457860211, "dur":7595, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721457867808, "dur":131, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721457867978, "dur":795, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721457868871, "dur":62, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":0, "ts":1701721457868805, "dur":4865, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721457873671, "dur":172943, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721458046615, "dur":400, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721458047172, "dur":1823, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1701721457868764, "dur":4987, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701721457873753, "dur":1169, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701721457874922, "dur":2817, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701721457877744, "dur":416, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":1, "ts":1701721457877742, "dur":419, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1701721457889220, "dur":215, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701721457889458, "dur":6209, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1701721457908211, "dur":314, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701721457895703, "dur":12872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701721457908650, "dur":76, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701721457908765, "dur":6882, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701721457915685, "dur":5350, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701721457921098, "dur":4852, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701721457925997, "dur":6056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701721457932110, "dur":5006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":1, "ts":1701721457937185, "dur":4725, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level0.resS" }}
+,{ "pid":12345, "tid":1, "ts":1701721457941939, "dur":104614, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701721457868589, "dur":5090, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701721457873684, "dur":3902, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701721457880461, "dur":1288, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/csharpactions/boot.config_tyr4.info" }}
+,{ "pid":12345, "tid":2, "ts":1701721457881754, "dur":416, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701721457882181, "dur":424, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":2, "ts":1701721457882606, "dur":392, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1701721457883217, "dur":106, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457883324, "dur":182, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457883508, "dur":900, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457884409, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457884500, "dur":285, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457884787, "dur":658, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457885447, "dur":537, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457885986, "dur":98, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457886086, "dur":378, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\ethan.355186\\Desktop\\Template\\Stumpy Road\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701721457886520, "dur":137, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Player5209a48b-inputdata.json" }}
+,{ "pid":12345, "tid":2, "ts":1701721457881753, "dur":5030, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701721457887019, "dur":76, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701721457887549, "dur":129803, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701721458020191, "dur":203, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701721458020191, "dur":204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701721458020425, "dur":1367, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701721458021794, "dur":24746, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457868602, "dur":5084, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457873692, "dur":1226, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457874918, "dur":2864, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457877797, "dur":276, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
+,{ "pid":12345, "tid":3, "ts":1701721457877785, "dur":289, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1701721457887480, "dur":13599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1701721457910401, "dur":101, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457901185, "dur":9327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701721457917681, "dur":77, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457910608, "dur":7160, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701721457917849, "dur":4307, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701721457922254, "dur":57, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701721457922314, "dur":4467, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701721457926838, "dur":5641, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701721457932527, "dur":5619, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":3, "ts":1701721457938186, "dur":108491, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701721457868783, "dur":5088, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701721457873874, "dur":904, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701721457874779, "dur":3011, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701721457877792, "dur":257, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1701721457892309, "dur":432, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701721457881113, "dur":11656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1701721457892972, "dur":21403, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701721457914428, "dur":5628, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701721457920115, "dur":5870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701721457926047, "dur":5621, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701721457931715, "dur":173, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityPlayer.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701721457931714, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701721457931906, "dur":114567, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701721457868640, "dur":5054, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701721457873697, "dur":1143, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701721457874840, "dur":2903, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701721457877748, "dur":458, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1701721457889469, "dur":7496, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1701721457908308, "dur":474, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701721457897072, "dur":11783, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701721457908917, "dur":6716, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701721457915714, "dur":6568, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701721457922432, "dur":5475, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701721457927969, "dur":5544, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701721457933596, "dur":5303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":5, "ts":1701721457938976, "dur":107683, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701721457868693, "dur":5011, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701721457873897, "dur":837, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Numerics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457873707, "dur":1556, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701721457875263, "dur":2427, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701721457877692, "dur":379, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1701721457883718, "dur":11183, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1701721457903431, "dur":211, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701721457894979, "dur":8670, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457903896, "dur":5811, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457909751, "dur":5218, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457915086, "dur":5952, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457921093, "dur":5115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457926248, "dur":90, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701721457926340, "dur":6942, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701721457933413, "dur":7625, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1701721457941066, "dur":105550, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701721457868730, "dur":4981, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701721457873715, "dur":1345, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701721457875060, "dur":2622, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701721457877702, "dur":469, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1701721457877687, "dur":484, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1701721457889785, "dur":6350, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1701721457908264, "dur":306, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701721457896185, "dur":12400, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701721457908683, "dur":6490, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701721457915253, "dur":6965, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701721457922395, "dur":7118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701721457929572, "dur":6308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701721457935974, "dur":5402, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level3.resS" }}
+,{ "pid":12345, "tid":7, "ts":1701721457941440, "dur":105129, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701721457869246, "dur":5356, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701721457874602, "dur":3050, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701721457877664, "dur":382, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
+,{ "pid":12345, "tid":8, "ts":1701721457877655, "dur":391, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1701721457882395, "dur":8664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1701721457891106, "dur":85, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701721457891105, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701721457891256, "dur":40978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701721457932290, "dur":5376, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1701721457937721, "dur":4539, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1701721457942284, "dur":104267, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701721457868790, "dur":5279, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701721457874071, "dur":530, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701721457874601, "dur":3128, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701721457877731, "dur":440, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1701721457890472, "dur":10913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1701721457908650, "dur":221, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701721457901421, "dur":7504, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701721457909138, "dur":5740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701721457914943, "dur":5151, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701721457920143, "dur":4893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701721457925092, "dur":4390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701721457929540, "dur":6103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701721457935720, "dur":5089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/resources.assets" }}
+,{ "pid":12345, "tid":9, "ts":1701721457940869, "dur":105723, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701721457868848, "dur":5253, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701721457874101, "dur":3492, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701721457877601, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":10, "ts":1701721457879651, "dur":5227, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":10, "ts":1701721457884903, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":10, "ts":1701721457885262, "dur":7088, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":10, "ts":1701721457892507, "dur":16598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701721457909146, "dur":5792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701721457914977, "dur":5455, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701721457920513, "dur":4882, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701721457925493, "dur":4016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701721457929566, "dur":6873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701721457936487, "dur":5435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level1.resS" }}
+,{ "pid":12345, "tid":10, "ts":1701721457941958, "dur":104575, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701721457868891, "dur":5281, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701721457874172, "dur":3417, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701721457877619, "dur":144, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":11, "ts":1701721457877602, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":11, "ts":1701721457878983, "dur":18538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":11, "ts":1701721457897557, "dur":10152, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701721457907758, "dur":7795, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701721457915653, "dur":4657, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701721457920401, "dur":5027, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701721457925482, "dur":4487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701721457930066, "dur":4728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701721457934843, "dur":4550, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":11, "ts":1701721457939424, "dur":107220, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701721457868941, "dur":5455, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701721457874396, "dur":3194, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701721457877615, "dur":474, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1701721457877602, "dur":488, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1701721457887715, "dur":6775, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1701721457894549, "dur":6086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457900673, "dur":7410, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457908140, "dur":5560, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457913739, "dur":4814, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457918645, "dur":4314, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457923014, "dur":4339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457927405, "dur":4356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701721457931815, "dur":4792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":12, "ts":1701721457936671, "dur":5068, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level1" }}
+,{ "pid":12345, "tid":12, "ts":1701721457941772, "dur":104789, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1701721457868971, "dur":5583, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1701721457874555, "dur":3037, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1701721457877601, "dur":570, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":13, "ts":1701721457888311, "dur":6697, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":13, "ts":1701721457895051, "dur":8324, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457903408, "dur":180, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1701721457903591, "dur":5611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457909259, "dur":5390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457914685, "dur":5157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457919923, "dur":3525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457923496, "dur":5113, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457928665, "dur":6083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1701721457934946, "dur":5488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":13, "ts":1701721457940475, "dur":106143, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1701721457869015, "dur":5549, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1701721457874564, "dur":3023, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1701721457877608, "dur":868, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1701721457888658, "dur":7799, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/app.info" }}
+,{ "pid":12345, "tid":14, "ts":1701721457908287, "dur":387, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1701721457896509, "dur":12174, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":14, "ts":1701721457908830, "dur":9506, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":14, "ts":1701721457918389, "dur":5343, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1701721457923782, "dur":4299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1701721457928136, "dur":5653, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1701721457933854, "dur":4155, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":14, "ts":1701721457938054, "dur":3993, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":14, "ts":1701721457942070, "dur":104471, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1701721457869052, "dur":5521, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1701721457874573, "dur":3221, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1701721457877795, "dur":268, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1701721457883322, "dur":63, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1701721457883914, "dur":10914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1701721457894931, "dur":12319, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":15, "ts":1701721457907291, "dur":5686, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1701721457918874, "dur":57, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1701721457913064, "dur":5879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1701721457919005, "dur":5259, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1701721457924392, "dur":5025, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1701721457929535, "dur":6492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1701721457936088, "dur":5416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level3" }}
+,{ "pid":12345, "tid":15, "ts":1701721457941530, "dur":105033, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1701721457869098, "dur":5481, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1701721457874579, "dur":3178, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1701721457877759, "dur":298, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1701721457883443, "dur":7791, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1701721457891378, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":16, "ts":1701721457891628, "dur":5276, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":16, "ts":1701721457896937, "dur":208, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1701721457897147, "dur":10263, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":16, "ts":1701721457907475, "dur":4273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":16, "ts":1701721457911811, "dur":3745, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1701721457915660, "dur":4969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1701721457920683, "dur":4994, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1701721457925732, "dur":6071, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1701721457931899, "dur":5828, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":16, "ts":1701721457937829, "dur":4286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":16, "ts":1701721457942137, "dur":104480, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1701721457869160, "dur":5427, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1701721457874587, "dur":3163, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1701721457877763, "dur":406, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
+,{ "pid":12345, "tid":17, "ts":1701721457877752, "dur":418, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":17, "ts":1701721457890210, "dur":9301, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":17, "ts":1701721457899702, "dur":17124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":17, "ts":1701721457916884, "dur":5184, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1701721457922134, "dur":4567, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.PropertiesModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1701721457926781, "dur":4452, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1701721457931285, "dur":5075, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1701721457936416, "dur":5356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level2.resS" }}
+,{ "pid":12345, "tid":17, "ts":1701721457941808, "dur":104737, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1701721457869208, "dur":5386, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1701721457874595, "dur":3159, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1701721457877756, "dur":380, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":18, "ts":1701721457887799, "dur":4525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":18, "ts":1701721457918796, "dur":112, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1701721457892494, "dur":26423, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":18, "ts":1701721457919011, "dur":4713, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1701721457923778, "dur":4721, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1701721457928590, "dur":6015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1701721457934658, "dur":4821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":18, "ts":1701721457939508, "dur":107094, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1701721457868754, "dur":4989, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1701721457873746, "dur":967, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1701721457874713, "dur":2960, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1701721457877676, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":19, "ts":1701721457879994, "dur":5348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":19, "ts":1701721457885368, "dur":61, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457885367, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457903374, "dur":211, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1701721457885529, "dur":18065, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457903678, "dur":387, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1701721457904086, "dur":5739, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457909889, "dur":6371, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457916363, "dur":11269, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457927700, "dur":9820, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1701721457937576, "dur":4434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level0" }}
+,{ "pid":12345, "tid":19, "ts":1701721457942044, "dur":104598, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1701721457869298, "dur":5396, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1701721457874695, "dur":3098, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1701721457877803, "dur":238, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.6f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
+,{ "pid":12345, "tid":20, "ts":1701721457877793, "dur":249, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":20, "ts":1701721457881017, "dur":10178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":20, "ts":1701721457891272, "dur":5822, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road.exe" }}
+,{ "pid":12345, "tid":20, "ts":1701721457897130, "dur":10229, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457907414, "dur":5059, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457912511, "dur":3753, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457916301, "dur":5190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457921552, "dur":4487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457926089, "dur":4442, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457930583, "dur":5798, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1701721457936437, "dur":5375, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road_Data/level2" }}
+,{ "pid":12345, "tid":20, "ts":1701721457941839, "dur":104715, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701721458050788, "dur":695, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

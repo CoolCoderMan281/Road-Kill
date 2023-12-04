@@ -13,6 +13,9 @@ public class Manager : MonoBehaviour
     public GameObject Car_Obj;
     public float MovementIncrement;
     public float Bounds;
+    public float Forward_Increase;
+    public bool Forward_Held;
+    public KeyCode Forward;
     public KeyCode Left;
     public KeyCode Right;
     public bool Debug;
@@ -213,6 +216,7 @@ public class Manager : MonoBehaviour
         }
         if (!Pause)
         {
+            Forward_Held = Input.GetKey(Forward);
             if (Input.GetKey(Left) || Input.GetKey(KeyCode.LeftArrow))
             {
                 // Left

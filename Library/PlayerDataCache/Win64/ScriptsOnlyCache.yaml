@@ -220,6 +220,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UiHandler
     methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: UiHandler
+    methodName: Click
   sceneClasses:
     Assets/Scenes/InitScene.unity:
     - Class: 1
@@ -1532,7 +1535,7 @@ ScriptsOnlyBuild:
     className: CarCollision
   - hash:
       serializedVersion: 2
-      Hash: eecc53c448ee77467f4c239027a4e3b5
+      Hash: cd66f39f53bc34c8c266742f95366f20
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Manager
@@ -1554,4 +1557,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
   - Assets/Scenes/RoadRage_Lose.unity
-  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.4/Stumpy-Road.exe
+  playerPath: C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road.exe

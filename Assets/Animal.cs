@@ -27,6 +27,10 @@ public class Animal : MonoBehaviour
         if (!manager.Pause)
         {
             Increment = manager.SpawnedObjectSpeed;
+            if(manager.Forward_Held)
+            {
+                Increment += manager.Forward_Increase;
+            }
             Vector3 newPos = transform.position;
             newPos.z -= Increment;
             newPos.y = 0.5f;
