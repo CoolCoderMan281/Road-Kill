@@ -388,4 +388,10 @@ public class UiHandler : MonoBehaviour
                 break;
         }
     }
+    
+    public void quitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is exiting");
+    }
 }
