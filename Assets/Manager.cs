@@ -38,6 +38,7 @@ public class Manager : MonoBehaviour
     [Header("Camera Handling")]
     public CameraHandler CameraHandler;
     public GameObject CameraTarget;
+    public Coroutine CamCoro = null;
     public float FOV;
     [Header("Spawning")]
     public bool CanSpawn;
@@ -76,35 +77,19 @@ public class Manager : MonoBehaviour
 
     public IEnumerator ChangeCamFOV(float next)
     {
-        UnityEngine.Debug.Log(next);
-        Vector3 nextFOV = new Vector3(next, 0, 0);
-        Vector3 current = new Vector3(CameraHandler.GetComponent<Camera>().fieldOfView, 0, 0);
-        bool error;
-        if (next < current.x) { error = true; }
-        else { error = false; }
-        while (true)
+        float currentFOV = CameraHandler.GetComponent<Camera>().fieldOfView;
+        bool increasing = next > currentFOV;
+
+        while ((increasing && currentFOV < next) || (!increasing && currentFOV > next))
         {
-            current = new Vector3(CameraHandler.GetComponent<Camera>().fieldOfView, 0, 0);
-            UnityEngine.Debug.Log(current.x);
-            int fov = (int)(Vector3.Lerp(current, nextFOV, 0.0025f).x);
-            UnityEngine.Debug.Log(fov);
-            CameraHandler.GetComponent<Camera>().fieldOfView = fov;
-            if (fov <= next+0.25f && error)
-            {
-                UnityEngine.Debug.Log("Done");
-                CameraHandler.GetComponent<Camera>().fieldOfView = next;
-                break;
-            } else if (fov >= next-0.25f && !error)
-            {
-                UnityEngine.Debug.Log("Done");
-                CameraHandler.GetComponent<Camera>().fieldOfView = next;
-                break;
-            } 
-            else
-            {
-                yield return new WaitForEndOfFrame();
-            }
+            currentFOV = Mathf.Lerp(currentFOV, next, 0.025f);
+
+            CameraHandler.GetComponent<Camera>().fieldOfView = currentFOV;
+            yield return null;
         }
+
+        CameraHandler.GetComponent<Camera>().fieldOfView = next;
+        UnityEngine.Debug.Log("Done");
     }
 
     public void PlayerSizeUpdate()
@@ -198,14 +183,14 @@ public class Manager : MonoBehaviour
                     RageActive = true;
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
                     StartCoroutine(RageMeterRelease());
-                    StartCoroutine(ChangeCamFOV(FOV / 2));
+                    CamCoro = StartCoroutine(ChangeCamFOV(FOV * 2));
                 }
                 if (RageProgress == 0 && RageActive) // End Rage!
                 {
                     RageActive = false;
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
                     StopCoroutine(RageMeterRelease());
-                    StartCoroutine(ChangeCamFOV(FOV));
+                    CamCoro = StartCoroutine(ChangeCamFOV(FOV));
                 }
                 if (RageProgress < 100 && !RageActive) // Increment Rage!
                 {
@@ -295,6 +280,10 @@ public class Manager : MonoBehaviour
         {
             if (CanDie)
             {
+                if (CamCoro != null)
+                {
+                    StopCoroutine(CamCoro);
+                }
                 CameraHandler.GetComponent<Camera>().fieldOfView = FOV;
                 Objects.Remove(obj);
                 Destroy(obj.gameObject);

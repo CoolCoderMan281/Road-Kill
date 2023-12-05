@@ -1535,7 +1535,7 @@ ScriptsOnlyBuild:
     className: CarCollision
   - hash:
       serializedVersion: 2
-      Hash: cd66f39f53bc34c8c266742f95366f20
+      Hash: 696c9d66e17645d8503607fbce5034db
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Manager
@@ -1557,4 +1557,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/RoadRage_Main.unity
   - Assets/Scenes/RoadRage_Lose.unity
-  playerPath: C:/Users/ethan.355186/Desktop/0.1.5/Stumpy-Road.exe
+  playerPath: C:/Users/AweSnap/Desktop/Builds/0.1.6/Stumpy-Road.exe
