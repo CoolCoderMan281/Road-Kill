@@ -1,3 +1,8 @@
-Library/
-Temp/
-UserSettings/
+/Stumpy-Road/[Ll]ibrary/
+/Stumpy-Road/[Tt]emp/
+/Stumpy-Road/[Oo]bj/
+/Stumpy-Road/[Bb]uild/
+/Stumpy-Road/[Bb]uilds/
+/Stumpy-Road/[Ll]ogs/
+/Stumpy-Road/[Uu]ser[Ss]ettings/
+/Stumpy-Road/.vs/
