@@ -30,6 +30,7 @@ public class Manager : MonoBehaviour
     public float RageTick;
     public float RageModifier;
     public float RageHitReward;
+    public float RageLoss;
     public bool RageActive;
     public Slider DebugRageProgressSlider;
     public Slider RageMeterSlider;
@@ -40,6 +41,7 @@ public class Manager : MonoBehaviour
     public GameObject CameraTarget;
     public Coroutine CamCoro = null;
     public float FOV;
+    public bool FOVControlled;
     [Header("Spawning")]
     public bool CanSpawn;
     public bool CanSpawnAnimals;
@@ -67,6 +69,7 @@ public class Manager : MonoBehaviour
         CameraHandler.follow_type = CameraHandler.TweenType.DELTA_TIME;
         StartCoroutine(SpawnAnimals());
         StartCoroutine(RageMeter());
+        StartCoroutine(DifficultyUpdater());
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
@@ -75,19 +78,44 @@ public class Manager : MonoBehaviour
         FOV = CameraHandler.camera.GetComponent<Camera>().fieldOfView;
     }
 
+    public IEnumerator DifficultyUpdater()
+    {
+        float savedSpeed = 0;
+        while (true)
+        {
+            if (!Pause && !Forward_Held)
+            {
+                SpawnedObjectSpeed += 0.01f;
+            }
+            if (Forward_Held)
+            {
+                savedSpeed += 0.01f;
+            } else
+            {
+                SpawnedObjectSpeed += savedSpeed;
+                savedSpeed = 0;
+            }
+            yield return new WaitForSeconds(1);
+        }
+    }
+
     public IEnumerator ChangeCamFOV(float next)
     {
         float currentFOV = CameraHandler.GetComponent<Camera>().fieldOfView;
         bool increasing = next > currentFOV;
-
+        FOVControlled = true;
         while ((increasing && currentFOV < next) || (!increasing && currentFOV > next))
         {
             currentFOV = Mathf.Lerp(currentFOV, next, 0.025f);
-
+            if (Math.Round(currentFOV) == next)
+            {
+                CameraHandler.GetComponent<Camera>().fieldOfView = next;
+                break;
+            }
             CameraHandler.GetComponent<Camera>().fieldOfView = currentFOV;
             yield return null;
         }
-
+        FOVControlled = false;
         CameraHandler.GetComponent<Camera>().fieldOfView = next;
         UnityEngine.Debug.Log("Done");
     }
@@ -192,10 +220,6 @@ public class Manager : MonoBehaviour
                     StopCoroutine(RageMeterRelease());
                     CamCoro = StartCoroutine(ChangeCamFOV(FOV));
                 }
-                if (RageProgress < 100 && !RageActive) // Increment Rage!
-                {
-                    RageProgress += RageIncrement;
-                }
                 DebugRageProgressSlider.value = RageProgress;
                 RageMeterSlider.value = RageProgress;
                 DebugRageProgressLabel.text = "Rage Progress (" + RageProgress + ")";
@@ -213,7 +237,7 @@ public class Manager : MonoBehaviour
             {
                 yield return new WaitForSeconds(RageTick);
             }
-            RageProgress -= RageIncrement*2;
+            RageProgress -= RageLoss;
             yield return new WaitForSeconds(RageTick);
         }
         RageProgress = 0;

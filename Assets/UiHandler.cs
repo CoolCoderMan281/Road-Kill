@@ -21,7 +21,7 @@ public class UiHandler : MonoBehaviour
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
                              UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
-                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff }
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss }
 
     public void OnApplicationQuit()
     {
@@ -180,7 +180,37 @@ public class UiHandler : MonoBehaviour
                 self.value = mgr.Forward_Increase;
                 action_label.text = "Boost buff (" + self.value + ")";
                 break;
+            case ActionType.UpdateRageLoss:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.RageLoss;
+                action_label.text = "Rage Loss (" + self.value + ")";
+                break;
         }
+    }
+
+    public void Update()
+    {
+        if (gameObject.activeSelf)
+        {
+            switch(action)
+            {
+                case ActionType.UpdateAnimalSpeed:
+                    Slider self = gameObject.GetComponent<Slider>();
+                    Manager mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                    self.value = mgr.SpawnedObjectSpeed;
+                    TMP_Text label = GameObject.Find("Animal_Speed_Label").GetComponent<TMP_Text>();
+                    label.text = "Animal Speed (" + mgr.SpawnedObjectSpeed + ")";
+                    break;
+                case ActionType.UpdateCamFOV:
+                    self = gameObject.GetComponent<Slider>();
+                    mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                    self.value = cameraHandler.camera.GetComponent<Camera>().fieldOfView;
+                    self.interactable = !mgr.FOVControlled;
+                    action_label.text = "CamFOV (" + self.value + ")";
+                    break;
+            }
+        }   
     }
 
     public void Click()
@@ -385,6 +415,12 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.Forward_Increase = self.value;
                 action_label.text = "Boost buff (" + self.value + ")";
+                break;
+            case ActionType.UpdateRageLoss:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.RageLoss = self.value;
+                action_label.text = "Rage Loss (" + self.value + ")";
                 break;
         }
     }
