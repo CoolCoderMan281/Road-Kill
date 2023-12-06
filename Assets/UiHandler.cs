@@ -21,7 +21,7 @@ public class UiHandler : MonoBehaviour
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
                              UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
-                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss }
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss, UpdateDiffTick }
 
     public void OnApplicationQuit()
     {
@@ -165,7 +165,8 @@ public class UiHandler : MonoBehaviour
                 break;
             case ActionType.UpdateCamXRot:
                 self = gameObject.GetComponent<Slider>();
-                self.value = cameraHandler.camera.transform.rotation.x;
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.XRot;
                 action_label.text = "CamX Rot (" + self.value + ")";
                 break;
             case ActionType.UpdateSize:
@@ -185,6 +186,12 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 self.value = mgr.RageLoss;
                 action_label.text = "Rage Loss (" + self.value + ")";
+                break;
+            case ActionType.UpdateDiffTick:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.DiffTick;
+                action_label.text = "Diff Tick (" + self.value + ")";
                 break;
         }
     }
@@ -398,9 +405,8 @@ public class UiHandler : MonoBehaviour
                 break;
             case ActionType.UpdateCamXRot:
                 self = gameObject.GetComponent<Slider>();
-                Quaternion rotation = cameraHandler.camera.transform.rotation;
-                rotation.x = self.value/180;
-                cameraHandler.camera.transform.rotation = rotation;
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.XRot = self.value;
                 action_label.text = "CamX Rot (" + self.value + ")";
                 break;
             case ActionType.UpdateSize:
@@ -421,6 +427,12 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.RageLoss = self.value;
                 action_label.text = "Rage Loss (" + self.value + ")";
+                break;
+            case ActionType.UpdateDiffTick:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.DiffTick = self.value;
+                action_label.text = "Diff Tick (" + self.value + ")";
                 break;
         }
     }

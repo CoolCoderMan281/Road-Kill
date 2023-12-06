@@ -16,6 +16,7 @@ public class Manager : MonoBehaviour
     public float Bounds;
     public float Forward_Increase;
     public bool Forward_Held;
+    public float DiffTick;
     public KeyCode Forward;
     public KeyCode Left;
     public KeyCode Right;
@@ -40,6 +41,7 @@ public class Manager : MonoBehaviour
     public CameraHandler CameraHandler;
     public GameObject CameraTarget;
     public Coroutine CamCoro = null;
+    public float XRot;
     public float FOV;
     public bool FOVControlled;
     [Header("Spawning")]
@@ -70,6 +72,7 @@ public class Manager : MonoBehaviour
         StartCoroutine(SpawnAnimals());
         StartCoroutine(RageMeter());
         StartCoroutine(DifficultyUpdater());
+        //XRot = MainCamera.transform.rotation.x;
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
@@ -95,7 +98,7 @@ public class Manager : MonoBehaviour
                 SpawnedObjectSpeed += savedSpeed;
                 savedSpeed = 0;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(DiffTick);
         }
     }
 
@@ -144,6 +147,10 @@ public class Manager : MonoBehaviour
 
     public void Update()
     {
+        Quaternion rotation = CameraHandler.camera.transform.rotation;
+        rotation.x = XRot / 180;
+        CameraHandler.camera.transform.rotation = rotation;
+
         if (menuHandler.currentMenu == menuHandler.GetMenuByName("pause"))
         {
             Pause = true;
