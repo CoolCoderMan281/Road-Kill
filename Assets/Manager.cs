@@ -17,6 +17,7 @@ public class Manager : MonoBehaviour
     public float Forward_Increase;
     public bool Forward_Held;
     public float DiffTick;
+    public float Score;
     public KeyCode Forward;
     public KeyCode Left;
     public KeyCode Right;
@@ -57,6 +58,7 @@ public class Manager : MonoBehaviour
     public MenuHandler menuHandler;
     public Slider Car_Speed_Slider;
     public TMP_Text Car_Speed_Label;
+    public TMP_Text Score_text;
 
     public void Start()
     {
@@ -147,6 +149,11 @@ public class Manager : MonoBehaviour
 
     public void Update()
     {
+        if (!Pause)
+        {
+            Score += SpawnedObjectSpeed;
+            Score_text.text = ""+(int)Score;
+        }
         Quaternion rotation = CameraHandler.camera.transform.rotation;
         rotation.x = XRot / 180;
         CameraHandler.camera.transform.rotation = rotation;
@@ -218,6 +225,7 @@ public class Manager : MonoBehaviour
                     RageActive = true;
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
                     StartCoroutine(RageMeterRelease());
+                    SpawnIncrement = SpawnIncrement / 3;
                     CamCoro = StartCoroutine(ChangeCamFOV(FOV * 2));
                 }
                 if (RageProgress == 0 && RageActive) // End Rage!
@@ -225,6 +233,7 @@ public class Manager : MonoBehaviour
                     RageActive = false;
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed;
                     StopCoroutine(RageMeterRelease());
+                    SpawnIncrement = SpawnIncrement * 3;
                     CamCoro = StartCoroutine(ChangeCamFOV(FOV));
                 }
                 DebugRageProgressSlider.value = RageProgress;
@@ -306,6 +315,7 @@ public class Manager : MonoBehaviour
         {
             RageProgress += RageIncrement * RageHitReward;
             Objects.Remove(obj);
+            Score += 1000;
             Destroy(obj.gameObject);
         } else
         {
