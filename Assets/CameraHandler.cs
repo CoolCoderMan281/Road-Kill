@@ -30,6 +30,7 @@ public class CameraHandler : MonoBehaviour
 
     public void Start()
     {
+        //Screen.SetResolution(1920, 1080, true);
         // Fool proofing
         Application.targetFrameRate = 144;
         QualitySettings.vSyncCount = 0;
