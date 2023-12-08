@@ -21,7 +21,7 @@ public class UiHandler : MonoBehaviour
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
                              UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
-                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss, UpdateDiffTick, UpdateImpactTime }
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss, UpdateDiffTick, UpdateImpactTime, QuitGame }
 
     public void OnApplicationQuit()
     {
@@ -445,6 +445,9 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.ImpactTime = self.value;
                 action_label.text = "Impact Time (" + self.value + ")";
+                break;
+            case ActionType.QuitGame:
+                Application.Quit();
                 break;
         }
     }

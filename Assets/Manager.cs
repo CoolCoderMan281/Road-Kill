@@ -163,7 +163,12 @@ public class Manager : MonoBehaviour
         rotation.x = XRot / 180;
         CameraHandler.camera.transform.rotation = rotation;
 
-        if (menuHandler.currentMenu == menuHandler.GetMenuByName("pause"))
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            menuHandler.SetCurrentMenu(menuHandler.GetMenuByName("debug"));
+        }
+
+        if (menuHandler.currentMenu == menuHandler.GetMenuByName("pause") || menuHandler.currentMenu == menuHandler.GetMenuByName("audio"))
         {
             Pause = true;
         } else

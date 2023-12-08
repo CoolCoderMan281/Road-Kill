@@ -7,6 +7,7 @@ public class AudioHandler : MonoBehaviour
 {
     [Header("Audios")]
     public List<Audio> audios = new List<Audio>();
+    public Audio currentMusic;
     [Header("Settings")]
     public bool SupressMUSIC;
     public bool SupressSFX;

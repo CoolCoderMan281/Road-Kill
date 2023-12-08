@@ -35,6 +35,10 @@ public class LevelManager : MonoBehaviour
         {
             //if (ActiveLevel.end != null) { ActiveLevel.end(); }
             Debug.Log("Ended level " + ActiveLevel.name);
+            if (NextLevel == null)
+            {
+                NextLevel = MainMenu_Level;
+            }
             ActiveLevel = NextLevel;
             //if (ActiveLevel.start != null) { ActiveLevel.start(); }
             try
