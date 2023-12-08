@@ -20,6 +20,7 @@ public class Manager : MonoBehaviour
     public float Score;
     public float ImpactTime;
     public bool ImpactActive;
+    public bool IsDead = false;
     public KeyCode Forward;
     public KeyCode Left;
     public KeyCode Right;
@@ -77,6 +78,7 @@ public class Manager : MonoBehaviour
         StartCoroutine(RageMeter());
         StartCoroutine(DifficultyUpdater());
         ImpactActive = false;
+        IsDead = false;
         //XRot = MainCamera.transform.rotation.x;
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
@@ -311,6 +313,16 @@ public class Manager : MonoBehaviour
         }
     }
 
+    public IEnumerator EndFrame()
+    {
+        UnityEngine.Debug.Log("Died!");
+        yield return new WaitForEndOfFrame();
+        UnityEngine.Debug.Log("Ready to screenshot!");
+        // Screenshot your loss!
+        CameraHandler.last_loss = ScreenCapture.CaptureScreenshotAsTexture();
+        levelManager.SetLevel(levelManager.GetLevelByName("RoadRage_Lose"));
+    }
+
     // Hit detection
     public void HandleHit(GameObject obj, Animal_Preset preset)
     {
@@ -336,7 +348,8 @@ public class Manager : MonoBehaviour
                 CameraHandler.GetComponent<Camera>().fieldOfView = FOV;
                 Objects.Remove(obj);
                 Destroy(obj.gameObject);
-                levelManager.SetLevel(levelManager.GetLevelByName("RoadRage_Lose"));
+                StartCoroutine(EndFrame());
+                UnityEngine.Debug.Log(IsDead);
             }
         }
     }

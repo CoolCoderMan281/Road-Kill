@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraHandler : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class CameraHandler : MonoBehaviour
     public TMP_Text fps_overlay;
     public bool fps_overlay_active = false;
     public float timer, refresh, avgFramerate;
+    public Texture2D last_loss;
 
     public enum TweenType
     {
@@ -72,5 +74,13 @@ public class CameraHandler : MonoBehaviour
                 Debug.LogWarning("Unknown camera follow_type");
                 break;
         }
+    }
+
+    public void OnLevelWasLoaded(int level)
+    {
+        GameObject display = GameObject.Find("Lose");
+        if (display == null) { return; }
+        display.GetComponent<RawImage>().texture = last_loss;
+        Debug.Log("Set texture!");
     }
 }

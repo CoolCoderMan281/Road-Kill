@@ -7042,7 +7042,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d513b9327e5c472488497e86aa7471ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8d568cdc9a9001047b855e3063e0009a, type: 2}
+      objectReference: {fileID: 2100000, guid: 782a62824f373e544863144e2bcdbcfd, type: 2}
     - target: {fileID: 919132149155446097, guid: d513b9327e5c472488497e86aa7471ad, type: 3}
       propertyPath: m_Name
       value: Animal
@@ -12533,6 +12533,7 @@ MonoBehaviour:
   Score: 0
   ImpactTime: 1
   ImpactActive: 0
+  IsDead: 0
   Forward: 119
   Left: 97
   Right: 100
