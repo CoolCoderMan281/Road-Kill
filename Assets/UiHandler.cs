@@ -21,7 +21,7 @@ public class UiHandler : MonoBehaviour
     public enum ActionType { SwitchMenu, SwitchLevel, CloseDialogue, StartDialogue, SetCameraTarget, Mute_SFX, Mute_MUSIC, Music_Volume, SFX_Volume, MainMenu, FPS_DISPLAY, UpdateSpeed, 
                              UpdateCamY, UpdateCamZ, UpdateCollisionVisibility, UpdateAnimalSpeed, UpdateRageIncrement, UpdateRageTick, UpdateRageProgress, UpdateRageSpeed,
                              UpdateHitRageReward, UpdateCanDie, UpdateCanSpawn, UpdateCanSpawnAnimal, UpdateCanSpawnObstacle, UpdateSpawnIncrement, KillObjects,
-                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss, UpdateDiffTick }
+                             ObjectSelector, ObjectType, UpdateCamFOV, UpdateCamXRot, UpdateSize, UpdateBoostBuff, UpdateRageLoss, UpdateDiffTick, UpdateImpactTime }
 
     public void OnApplicationQuit()
     {
@@ -192,6 +192,12 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 self.value = mgr.DiffTick;
                 action_label.text = "Diff Tick (" + self.value + ")";
+                break;
+            case ActionType.UpdateImpactTime:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                self.value = mgr.ImpactTime;
+                action_label.text = "Impact Time (" + self.value + ")";
                 break;
         }
     }
@@ -433,6 +439,12 @@ public class UiHandler : MonoBehaviour
                 mgr = GameObject.Find("Manager").GetComponent<Manager>();
                 mgr.DiffTick = self.value;
                 action_label.text = "Diff Tick (" + self.value + ")";
+                break;
+            case ActionType.UpdateImpactTime:
+                self = gameObject.GetComponent<Slider>();
+                mgr = GameObject.Find("Manager").GetComponent<Manager>();
+                mgr.ImpactTime = self.value;
+                action_label.text = "Impact Time (" + self.value + ")";
                 break;
         }
     }

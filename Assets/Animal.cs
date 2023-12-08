@@ -24,7 +24,7 @@ public class Animal : MonoBehaviour
 
     public void Update()
     {
-        if (!manager.Pause)
+        if (!manager.Pause && !manager.ImpactActive)
         {
             Increment = manager.SpawnedObjectSpeed;
             if(manager.Forward_Held)

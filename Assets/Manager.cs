@@ -18,6 +18,8 @@ public class Manager : MonoBehaviour
     public bool Forward_Held;
     public float DiffTick;
     public float Score;
+    public float ImpactTime;
+    public bool ImpactActive;
     public KeyCode Forward;
     public KeyCode Left;
     public KeyCode Right;
@@ -74,6 +76,7 @@ public class Manager : MonoBehaviour
         StartCoroutine(SpawnAnimals());
         StartCoroutine(RageMeter());
         StartCoroutine(DifficultyUpdater());
+        ImpactActive = false;
         //XRot = MainCamera.transform.rotation.x;
         levelManager = MainCamera.GetComponent<LevelManager>();
         Car_Speed_Slider.value = MovementIncrement;
@@ -88,7 +91,7 @@ public class Manager : MonoBehaviour
         float savedSpeed = 0;
         while (true)
         {
-            if (!Pause && !Forward_Held)
+            if ((!Pause || !ImpactActive)&& !Forward_Held)
             {
                 SpawnedObjectSpeed += 0.01f;
             }
@@ -149,7 +152,7 @@ public class Manager : MonoBehaviour
 
     public void Update()
     {
-        if (!Pause)
+        if (!Pause && !ImpactActive)
         {
             Score += SpawnedObjectSpeed;
             Score_text.text = ""+(int)Score;
@@ -166,7 +169,7 @@ public class Manager : MonoBehaviour
             Pause = false;
         }
         HandleInput(); 
-        if (!RageActive && !Pause)
+        if (!RageActive && !Pause && !ImpactActive)
         {
             Original_SpawnedObjectSpeed = SpawnedObjectSpeed;
         }
@@ -184,7 +187,7 @@ public class Manager : MonoBehaviour
     {
         while (true)
         {
-            if (CanSpawn && !Pause)
+            if (CanSpawn && !Pause && !ImpactActive)
             {
                 Animal_Preset rand_animal = Animals[UnityEngine.Random.Range(0, Animals.Count)];
                 if ((rand_animal.Animal_Type == Animal_Preset.AnimalType.Single && CanSpawnAnimals) || (rand_animal.Animal_Type == Animal_Preset.AnimalType.Obstacle && CanSpawnObstacles))
@@ -214,7 +217,7 @@ public class Manager : MonoBehaviour
     {
         while (true)
         {
-            if (Pause)
+            if (Pause || ImpactActive)
             {
                 yield return new WaitForSeconds(RageTick);
             }
@@ -249,7 +252,7 @@ public class Manager : MonoBehaviour
     {
         while (RageProgress > 0 && RageActive) // Active Rage!
         {
-            if (Pause)
+            if (Pause || ImpactActive)
             {
                 yield return new WaitForSeconds(RageTick);
             }
@@ -277,7 +280,7 @@ public class Manager : MonoBehaviour
                 uih.Click();
             }
         }
-        if (!Pause)
+        if (!Pause && !ImpactActive)
         {
             Forward_Held = Input.GetKey(Forward);
             if (Input.GetKey(Left) || Input.GetKey(KeyCode.LeftArrow))
@@ -317,6 +320,11 @@ public class Manager : MonoBehaviour
             Objects.Remove(obj);
             Score += 1000;
             Destroy(obj.gameObject);
+            if(!ImpactActive)
+            {
+                ImpactActive = true;
+                Invoke(nameof(EndImpact), ImpactTime);
+            }
         } else
         {
             if (CanDie)
@@ -331,6 +339,12 @@ public class Manager : MonoBehaviour
                 levelManager.SetLevel(levelManager.GetLevelByName("RoadRage_Lose"));
             }
         }
+    }
+
+    // End impact
+    public void EndImpact()
+    {
+        ImpactActive = false;
     }
 
     // Miss in-point
