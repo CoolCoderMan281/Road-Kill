@@ -7,6 +7,7 @@ public class AudioHandler : MonoBehaviour
 {
     [Header("Audios")]
     public List<Audio> audios = new List<Audio>();
+    public List<Audio> active_audio = new List<Audio>();
     public Audio currentMusic;
     [Header("Settings")]
     public bool SupressMUSIC;
@@ -24,6 +25,29 @@ public class AudioHandler : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void Update()
+    {
+        UpdateAudios();
+        if (currentMusic != null)
+        {
+            currentMusic.UpdateSourceAttributes();
+        }
+    }
+
+    public void PlayMusic(Audio music)
+    {
+        if (currentMusic == null)
+        {
+            currentMusic = music;
+            StartCoroutine(currentMusic.FadeIn());
+        } else
+        {
+            StartCoroutine(currentMusic.FadeOut());
+            currentMusic = music;
+            StartCoroutine(currentMusic.FadeIn());
+        }
     }
 
     public void SetAudioGroupVolume(Audio.AudioType group, float volume)

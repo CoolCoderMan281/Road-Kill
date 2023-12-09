@@ -16,7 +16,7 @@ public class CameraHandler : MonoBehaviour
     [Header("External")]
     public GameObject MenuHandler;
     public AudioHandler ah;
-    public Audio CurrentMusic;
+    public Coroutine CurrentMusic;
     public TMP_Text fps_overlay;
     public bool fps_overlay_active = false;
     public float timer, refresh, avgFramerate;
@@ -81,35 +81,28 @@ public class CameraHandler : MonoBehaviour
 
     public void OnLevelWasLoaded(int level)
     {
-        StartCoroutine(UpdateMusic(level));
+        UpdateMusic(level);
     }
 
-    public IEnumerator UpdateMusic(int level)
+    public void UpdateMusic(int level)
     {
-        Debug.Log(CurrentMusic.name);
         GameObject display = GameObject.Find("Lose");
         if (display != null)
         {
             display.GetComponent<RawImage>().texture = last_loss;
             Debug.Log("Set texture!");
-            yield return StartCoroutine(CurrentMusic.FadeOut());
-            CurrentMusic = null;
+            ah.PlayMusic(ah.GetAudioByName("Title"));
         }
         if (level == 2)
         {
-            yield return StartCoroutine(CurrentMusic.FadeOut());
-            CurrentMusic = null;
-            CurrentMusic = ah.GetAudioByName("RushHour");
+            ah.PlayMusic(ah.GetAudioByName("RushHour"));
         }
         if (level == 1)
         {
-            CurrentMusic = null;
-            CurrentMusic = ah.GetAudioByName("Title");
-        }
-        if (CurrentMusic != null)
-        {
-            Debug.Log(CurrentMusic.name);
-            yield return StartCoroutine(CurrentMusic.FadeIn());
+            if (ah.currentMusic != ah.GetAudioByName("Title"))
+            {
+                ah.PlayMusic(ah.GetAudioByName("Title"));
+            }
         }
     }
 }

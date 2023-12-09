@@ -59,6 +59,7 @@ public class Manager : MonoBehaviour
     [Header("External")]
     public LevelManager levelManager;
     public MenuHandler menuHandler;
+    public AudioHandler ah;
     public Slider Car_Speed_Slider;
     public TMP_Text Car_Speed_Label;
     public TMP_Text Score_text;
@@ -81,6 +82,7 @@ public class Manager : MonoBehaviour
         IsDead = false;
         //XRot = MainCamera.transform.rotation.x;
         levelManager = MainCamera.GetComponent<LevelManager>();
+        ah = MainCamera.GetComponent<AudioHandler>();
         Car_Speed_Slider.value = MovementIncrement;
         Car_Speed_Label.text = "Car Speed ("+Car_Speed_Slider.value.ToString()+")";
         trueSize = Car_Obj.transform.localScale;
@@ -132,6 +134,7 @@ public class Manager : MonoBehaviour
 
     public void PlayerSizeUpdate()
     {
+        return;
         Vector3 scale = trueSize;
         scale.x = Size;
         scale.y = (Size*2);
@@ -236,7 +239,8 @@ public class Manager : MonoBehaviour
                     SpawnedObjectSpeed = Original_SpawnedObjectSpeed * RageModifier;
                     StartCoroutine(RageMeterRelease());
                     SpawnIncrement = SpawnIncrement / 3;
-                    CamCoro = StartCoroutine(ChangeCamFOV(FOV * 2));
+                    CamCoro = StartCoroutine(ChangeCamFOV(65));
+                    CanSpawnObstacles = false;
                 }
                 if (RageProgress == 0 && RageActive) // End Rage!
                 {
@@ -245,6 +249,7 @@ public class Manager : MonoBehaviour
                     StopCoroutine(RageMeterRelease());
                     SpawnIncrement = SpawnIncrement * 3;
                     CamCoro = StartCoroutine(ChangeCamFOV(FOV));
+                    CanSpawnObstacles = true;
                 }
                 DebugRageProgressSlider.value = RageProgress;
                 RageMeterSlider.value = RageProgress;
@@ -289,7 +294,14 @@ public class Manager : MonoBehaviour
         }
         if (!Pause && !ImpactActive)
         {
-            Forward_Held = Input.GetKey(Forward);
+            Forward_Held = (Input.GetKey(Forward) || Input.GetKey(KeyCode.UpArrow)) && !RageActive;
+            if (Forward_Held)
+            {
+                MovementIncrement = 0.5f;
+            } else
+            {
+                MovementIncrement = 1.5f;
+            }
             if (Input.GetKey(Left) || Input.GetKey(KeyCode.LeftArrow))
             {
                 // Left
@@ -339,6 +351,14 @@ public class Manager : MonoBehaviour
             Destroy(obj.gameObject);
             if(!ImpactActive)
             {
+                if (preset.Animal_Obj.name == "Chicken")
+                {
+                    ah.GetAudioByName("Chicken_Dead").Play();
+                } else if (preset.Animal_Obj.name == "Deer")
+                {
+                    ah.GetAudioByName("Deer_Dead").Play();
+                }
+                ah.GetAudioByName("Impact").Play();
                 ImpactActive = true;
                 Invoke(nameof(EndImpact), ImpactTime);
             }
@@ -354,7 +374,7 @@ public class Manager : MonoBehaviour
                 Objects.Remove(obj);
                 Destroy(obj.gameObject);
                 StartCoroutine(EndFrame());
-                UnityEngine.Debug.Log(IsDead);
+                ah.GetAudioByName("Crash").Play();
             }
         }
     }

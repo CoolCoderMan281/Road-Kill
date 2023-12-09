@@ -5,6 +5,7 @@ using UnityEngine;
 public class Animal : MonoBehaviour
 {
     public float Increment;
+    public float LastIncrement;
     public Animal_Preset preset;
     public Manager manager;
     public Vector3 target;
@@ -29,8 +30,16 @@ public class Animal : MonoBehaviour
             Increment = manager.SpawnedObjectSpeed;
             if(manager.Forward_Held)
             {
-                Increment += manager.Forward_Increase;
+                Vector3 tmp1 = new Vector3(LastIncrement, 0, 0);
+                Vector3 tmp2 = new Vector3(Increment + manager.Forward_Increase, 0, 0);
+                Increment = Vector3.Lerp(tmp1, tmp2, 0.05f).x;
+            } else
+            {
+                Vector3 tmp1 = new Vector3(LastIncrement, 0, 0);
+                Vector3 tmp2 = new Vector3(Increment, 0, 0);
+                Increment = Vector3.Lerp(tmp1, tmp2, 0.05f).x;
             }
+            LastIncrement = Increment;
             Vector3 newPos = transform.position;
             newPos.z -= Increment;
             newPos.y = 0.5f;
