@@ -14480,7 +14480,7 @@ MonoBehaviour:
   Forward: 119
   Left: 97
   Right: 100
-  Debug: 1
+  Debug: 0
   CanDie: 1
   Size: 0.716
   Pause: 0
